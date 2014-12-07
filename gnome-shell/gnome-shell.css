@@ -1,8 +1,8 @@
 /* Copernico 0.1. Un tema para GNOME Shell
  * Copyright 2014, Michael Yugcha
  * 
- *   Copyright 2009, Red Hat, Inc.
- *   Copyright 2009 Intel Corporation
+ * Copyright 2009, Red Hat, Inc.
+ * Copyright 2009 Intel Corporation
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms and conditions of the GNU Lesser General Public License,
@@ -1136,7 +1136,7 @@ StScrollBar StButton#vhandle:active {
 .grid-search-result .overview-icon {
     border-radius: 4px;
     padding: 6px;
-    border: 1px rgba(0,0,0,0);
+    border: 0px rgba(255, 255, 255, 0);
     transition-duration: 100ms;
     text-align: center;
 }
@@ -1172,9 +1172,9 @@ StScrollBar StButton#vhandle:active {
 .list-search-result:hover,
 .grid-search-result:hover .overview-icon {
     background-color: rgba(255,255,255,0.1);
-    text-shadow: black 0px 2px 2px;
+    text-shadow: rgb(30, 30, 30) 0px 1px 1px;
     transition-duration: 100ms;
-    color:white;
+    color: white;
 }
 
 .app-display .app-well-app > .overview-icon {
@@ -1203,12 +1203,11 @@ StScrollBar StButton#vhandle:active {
 .show-apps:active > .overview-icon,
 .search-provider-icon:active,
 .list-search-result:active {
-    background-gradient-start: rgba(255, 255, 255, .05);
-    background-gradient-end: rgba(255, 255, 255, .15);
-    background-gradient-direction: vertical;
+    background-gradient-start: rgba(245, 245, 245, 0.1);
+    background-gradient-end: rgba(245, 245, 245, 0.1);
+    background-gradient-direction: horizontal;
     border-radius: 4px;
-    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.7);
-    transition-duration: 100ms;
+    box-shadow: 0px;
 }
 
 .show-apps:checked .show-apps-icon,
