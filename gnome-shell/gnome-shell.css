@@ -1,8 +1,8 @@
-/* Copernico 0.1. Un tema para GNOME Shell
- * Copyright 2014, Michael Yugcha
- * 
- * Copyright 2009, Red Hat, Inc.
- * Copyright 2009 Intel Corporation
+/* This stylesheet is generated, DO NOT EDIT */
+/* Copyright 2009, 2015 Red Hat, Inc.
+ *
+ * Portions adapted from Mx's data/style/default.css
+ *   Copyright 2009 Intel Corporation
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms and conditions of the GNU Lesser General Public License,
@@ -17,2782 +17,1824 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
  */
-
-/* Text Styles */
-
-/* default text style */
+/* GLOBALS */
 stage {
-    font-family: cantarell, sans-serif;
-    font-size: 11pt;
-    color: white;
-}
+  font-family: Cantarell, Sans-Serif;
+  font-size: 11pt;
+  color: #eeeeec; }
 
-/* links */
-.shell-link {
-    color: #0000ff;
-    text-decoration: underline;
-}
+/* WIDGETS */
+/* Buttons */
+.button {
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 4px 32px;
+    color: #3C3C3C;
+    background-color: rgb(239,239,239);
+    border-color: rgb(239,239,239);
+    box-shadow: inset 0 1px rgba(0,0,0,0);
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black; }
+.button:focus,
+.button:hover {
+    background-color: rgb(249,249,249);
+    border-color: rgb(249,249,249);
+    box-shadow: inset 0 1px rgba(0,0,0,0);}
+.button:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+    box-shadow: inset 0 1px rgba(0,0,0,0);
+    text-shadow: none;
+    icon-shadow: none; }
+  .button:active {
+    background-color: rgb(234,234,234);
+    border-color: rgb(234,234,234);
+    box-shadow: inset 0 1px rgba(0,0,0,0);}
 
-.shell-link:hover {
-    color: #0000e0;
-}
+/* Entries */
+StEntry {
+    border-radius: 3px;
+    padding: 2px;
+    border-width: 1px;
+    color: rgb(190,190,190);
+    border-color: rgba(30,30,30,0.3);
+    background-color: transparent;
+    box-shadow: none;
+    selection-background-color: #2C82C9;
+    selected-color: #ffffff;
+    transition-duration: 200ms; }
+StEntry:focus,
+StEntry:hover {
+    color: rgb(60,60,60);
+    transition-duration: 200ms;
+    background-color: rgba(250,250,250,1); }
+StEntry:insensitive {
+    color: #939695;
+    border-color: #323636;
+    box-shadow: none; }
+StEntry StIcon.capslock-warning {
+    icon-size: 16px;
+    warning-color: #f57900;
+    padding: 0 4px; }
 
-/* small */
-.app-well-menu,
-.run-dialog-error-label {
-    font-size: 9pt;
-}
-
-/* small bold */
-.dash-label,
-.window-caption,
-.switcher-list, 
-.app-well-app > .overview-icon,
-.show-apps > .overview-icon,
-.grid-search-result .overview-icon {
-    font-size: 9pt;
-    font-weight: bold;
-}
-
-/* Scroll Bars */
+/* Scrollbars */
+StScrollView.vfade {
+    -st-vfade-offset: 68px; }
+StScrollView.hfade {
+    -st-hfade-offset: 68px; }
 
 StScrollBar {
-    padding: 0px;
-}
-
-StScrollView.vfade {
-    -st-vfade-offset: 68px;
-}
-
-StScrollView.hfade {
-    -st-hfade-offset: 68px;
-}
-
+    padding: 0; }
 StScrollView StScrollBar {
-    min-width: 0px;
-    min-height: 0px;
-}
-
+    min-width: 14px;
+    min-height: 14px; }
 StScrollBar StBin#trough {
-    background-color: rgba(245,245,245,0.1);
-    border-radius: 4px;
-}
+    border-radius: 0;
+    background-color: transparent; }
+StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+    border-radius: 8px;
+    background-color: #393f3f;
+    margin: 3px; }
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+    background-color: #515a5a; }
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:active {
+    background-color: #2C82C9; }
 
-StScrollBar StButton#vhandle {
-    background-color: rgba(245, 245, 245, 0.6);
-    border: 0px solid #242424;
-    border-radius: 4px;
-}
-
-StScrollBar StButton#hhandle {
-    background-color: rgba(245,245,245,0.6);
-    border: 0px solid #242424;
-    border-radius: 4px
-}
-
-StScrollBar StButton#hhandle:hover,
-StScrollBar StButton#vhandle:hover {
-    background-color: rgba(245,245,245,0.8);
-}
-
-StScrollBar StButton#hhandle:active,
-StScrollBar StButton#vhandle:active {
-    background-color: #fff;
-}
+/* Slider */
+.slider {
+    height: 1em;
+    -slider-height: 0.2em;
+    -slider-background-color: #323636;
+    -slider-border-color: transparent;
+    -slider-active-background-color: #2969B0;
+    -slider-active-border: 1px solid #999;der-color: #2969B0;
+    -slider-border-width: 1px;
+    -slider-handle-radius: 6px; }
 
 /* Check Boxes */
-
 .check-box StBoxLayout {
-    spacing: .8em;
-}
-
+  spacing: .8em; }
 .check-box StBin {
-    width: 24px;
-    height: 22px;
-    background-image: url("checkbox-off.svg");
-}
-
+  width: 24px;
+  height: 22px;
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-off.svg"); }
 .check-box:focus StBin {
-    background-image: url("checkbox-off-focused.svg");
-}
-
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"); }
 .check-box:checked StBin {
-    background-image: url("checkbox.svg");
-}
-
+  background-image: url("resource:///org/gnome/shell/theme/checkbox.svg"); }
 .check-box:focus:checked StBin {
-    background-image: url("checkbox-focused.svg");
-}
-
-/* Slider, botones de volumen y brillo*/
-
-.slider {
-    height: 0em;
-    color: #d7d7d7;
-    -slider-height: 0.25em;
-    -slider-background-color: #d3d3d3;
-    -slider-border-color: #5f5f5f;
-    -slider-active-background-color: rgba(52, 152, 219,1.0);
-    -slider-active-border-color: #1f6dbc;
-    -slider-border-width: 0px;
-    -slider-handle-radius: 5px;
-}
-
-/* PopupMenu */
-
-.popup-menu-ornament {
-    text-align: right;
-    width: 1em;
-}
-
-.popup-menu-boxpointer,
-.candidate-popup-boxpointer {
-    -arrow-border-radius: 8px;
-    -arrow-background-color: rgba(30,30,30,0.95);
-    -arrow-border-width: 0px;
-    -arrow-border-color: #FFF;
-    -arrow-base: 0px;
-    -arrow-rise: 3px;
-}
-
-.popup-menu {
-    color: rgb(235, 235, 235);
-    min-width: 200px;
-}
-
-.unicode-arrow {
-    font-size: 120%;
-}
-
-.popup-submenu-menu-item:open {
-    background-color: rgba(75, 75, 75, 1);
-}
-
-.popup-sub-menu {
-    background-gradient-start: rgba(30,30,30,0.8);
-    background-gradient-end: rgba(30,30,30,0.8);
-    background-gradient-direction: vertical;
-    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
-}
-
-.popup-sub-menu:scrolled .popup-menu-item:ltr {
-    padding-right: 0em;
-}
-
-.popup-sub-menu:scrolled .popup-menu-item:rtl {
-    padding-left: 0em;
-}
-
-.popup-sub-menu StScrollBar {
-    padding: 4px;
-}
-
-.popup-sub-menu StScrollBar StBin#trough {
-    border-width: 0px;
-}
-
-.popup-sub-menu StScrollBar StBin#vhandle {
-    background-color: #4c4c4c;
-    border-width: 0px;
-}
-
-/* The remaining popup-menu sizing is all done in ems, so that if you
- * override .popup-menu.font-size, everything else will scale with it.
- */
-.popup-menu-content {
-    padding: 1em 0em;
-}
-
-.popup-menu-item {
-    spacing: 12px;
-}
-
-.popup-menu-item:ltr {
-    padding: .4em 1.75em .4em 0em;
-}
-
-.popup-menu-item:rtl {
-    padding: .4em 0em .4em 1.75em;
-}
-
-.popup-menu-item:active {
-    background-color: rgba(41, 128, 185, 1);
-}
-
-.popup-menu-item:insensitive {
-    color: #9f9f9f;
-}
-
-.popup-image-menu-item {
-}
-
-.popup-separator-menu-item {
-    -gradient-height: 1px;
-    -gradient-start: rgba(245,245,245,0.1);
-    -gradient-end: rgba(245,245,245,0.4);
-    -margin-horizontal: 0px;
-    height: 1px;
-    padding: 0px 0px;
-}
-
-.popup-alternating-menu-item:alternate {
-    font-weight: normal;
-}
-
-.popup-status-menu-item {
-    font-weight: normal;
-    color: rgba(245,245,245);
-}
-
-.popup-inactive-menu-item, .popup-inactive-menu-item:insensitive {
-    color: rgb(245,245,245);
-}
-
-.popup-menu-icon {
-    icon-size: 1em;
-}
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-focused.svg"); }
 
 /* Switches */
 .toggle-switch {
-    width: 65px;
-    height: 22px;
-}
+  width: 65px;
+  height: 22px;
+  background-size: contain; }
 
 .toggle-switch-us {
-    background-image: url("toggle-off-us.svg");
-    background-size: contain;
-}
-.toggle-switch-us:checked {
-    background-image: url("toggle-on-us.svg");
-    background-size: contain;
-}
+  background-image: url("resource:///org/gnome/shell/theme/toggle-off-us.svg"); }
+  .toggle-switch-us:checked {
+    background-image: url("resource:///org/gnome/shell/theme/toggle-on-us.svg"); }
 
 .toggle-switch-intl {
-    background-image: url("toggle-off-intl.svg");
-    background-size: contain;
-}
-.toggle-switch-intl:checked {
-    background-image: url("toggle-on-intl.svg");
-    background-size: contain;
-}
+  background-image: url("resource:///org/gnome/shell/theme/toggle-off-intl.svg"); }
+  .toggle-switch-intl:checked {
+    background-image: url("resource:///org/gnome/shell/theme/toggle-on-intl.svg"); }
 
-/* Network */
+/* links */
+.shell-link {
+  color: #4a90d9; }
+  .shell-link:hover {
+    color: #74aae2; }
 
-.nm-dialog {
-    max-height: 500px;
-    min-height: 450px;
-    min-width: 470px;
-}
+/* Modal Dialogs */
+.headline {
+  font-size: 110%; }
 
-.nm-dialog-content {
-    spacing: 20px;
-}
+.lightbox {
+  background-color: black; }
 
-.nm-dialog-header-hbox {
-    spacing: 10px;
-}
+.flashspot {
+  background-color: white; }
 
-.nm-dialog-header-icon {
-    icon-size: 32px;
-}
-
-.nm-dialog-scroll-view {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-}
-
-.nm-dialog-header {
-    font-weight: bold;
-}
-
-.nm-dialog-item {
-    font-size: 12pt;
-    border-bottom: 0px solid #666;
-    padding: 12px;
-    background-color: rgba(41, 128, 185,0);
-}
-
-.nm-dialog-item:focus {
-    background-color: rgba(41, 128, 185,1.0);
-    color: #FFF;
-    border-color: rgba(0,0,0,0);
-}
-
-.nm-dialog-item:checked {
-    background-color: rgba(41, 128, 185,1.0);
-    color: #FFF;
-    border-color: rgba(0,0,0,0);
-}
-
-.nm-dialog-item-box {
-    spacing: 20px;
-}
-
-.nm-dialog-icons {
-    spacing: .5em;
-}
-
-.nm-dialog-icon {
-    icon-size: 16px;
-}
-
-/* 
-    background-gradient-start: rgba(38, 194, 129,1.0);
-    background-gradient-end: rgba(38, 166, 91,1.0);
- */
-
-.nm-dialog .modal-dialog-button:last-child{
-    border-image: none;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(30, 139, 195,1.0);
-    background-gradient-end: rgba(37, 116, 169,1.0);
-    color: #fff;
-}
-
-.nm-dialog .modal-dialog-button:last-child:hover{
-    background-gradient-start: rgba(30, 139, 195,0.85);
-    background-gradient-end: rgba(37, 116, 169,0.85);
-}
-
-.nm-dialog .modal-dialog-button:last-child:active{
-    background-gradient-start: rgba(10, 119, 175,1);
-    background-gradient-end: rgba(17, 96, 149,1);
-}
-
-.nm-dialog .modal-dialog-button:last-child:insensitive {
-    border-color: rgba(0,0,0,0);
-    background-gradient-start: rgba(30, 139, 195, 0.4);
-    background-gradient-end: rgba(17, 96, 169, 0.4);
-}
-
-/* Buttons */
-
-/* Botones de notificaciones, musica y expulsar usb */
-.notification-button,
-.hotplug-resident-eject-button,
-.notification-icon-button{
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(40, 40, 40,1.0);
-    background-gradient-end: rgba(30, 30, 30,1.0);
-    border-image: none;
-    color: #FFF;
-    border: 0px;
-}
-
-.notification-button:hover,
-.hotplug-resident-eject-button:hover,
-.notification-icon-button:hover{
-    background-gradient-start: rgba(50, 50, 50,1);
-    background-gradient-end: rgba(40, 40, 40,1);
-}
-
-.notification-button:focus,
-.hotplug-resident-eject-button:focus,
-.notification-icon-button:focus{
-    border: 1px rgba(150, 150, 150,0.5);
-}
-
-.notification-button:active,
-.hotplug-resident-eject-button:active,
-.notification-icon-button:active{
-    background-gradient-start: rgba(50, 50, 50,1);
-    background-gradient-end: rgba(50, 50, 50,1);
-}
-
-/* Cuando se conecta un usb */
-.hotplug-notification-item{
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(50, 50, 50,0);
-    background-gradient-end: rgba(30, 30, 30,0);
-    border-image: none;
-    color: #FFF;
-    border: 1px solid rgba(130, 130,130,1);
-    border-radius: 5px;
-    font-weight: normal;
-}
-
-.hotplug-notification-item:hover{
-    background-gradient-start: rgba(150, 150, 150,0.2);
-    background-gradient-end: rgba(130, 130, 130,0.2);
-}
-
-.hotplug-notification-item:active{
-    background-gradient-start: rgba(150, 150, 150,0.35);
-    background-gradient-end: rgba(130, 130, 130,0.35);
-}
-
-.candidate-page-button,
-.modal-dialog-button{
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(236, 236, 236,1.0);
-    background-gradient-end: rgba(210, 215, 211,1.0);
-    border-image: none;
+.modal-dialog {
+    border-radius: 6px;
     color: #333;
-    border: 1px solid rgba(108,122,137,0.1);
-    padding: 4px 24px;
-    font-size: 13px;
-    border-radius: 4px;
+    background-color: #f4f4f4;
+    border: none;
+    box-shadow: 0px 0px 8px #3C3C3C;
+    padding: 0px; }
+.modal-dialog > * {
+    padding: 24px;
+    border-radius: 0px; }
+.modal-dialog .run-dialog-entry {
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0);
+    color: #3C3C3C;
+    width: 20em;
+    margin-bottom: 0px; }
+.modal-dialog .run-dialog-error-box {
+    padding-top: 16px;
+    spacing: 6px; }
+.modal-dialog .run-dialog-button-box {
+    padding-top: 1em; }
+.modal-dialog .run-dialog-label {
+    font-size: 10pt;
     font-weight: normal;
-}
+    color: #3C3C3C;
+    padding-bottom: 6px; }
 
-.candidate-page-button:hover,
-.modal-dialog-button:hover {
-    background-gradient-start: rgba(245, 245, 245,1);
-    background-gradient-end: rgba(220, 225, 221,1);
-}
+.modal-dialog-button-box,
+.modal-dialog > .modal-dialog-button-box {
+    spacing: 0px;
+    margin: 0px;
+    padding: 18px 28px;
+    background-color: #DCDCDC;
+    border: solid 0px #c4c4c4;
+    border-radius: 0px 0px 6px 6px; }
 
-.modal-dialog-button:focus{
-    border: 1px rgba(54, 72, 90,0.3);
-}
+.show-processes-dialog-subject,
+.mount-question-dialog-subject,
+.end-session-dialog-subject {
+  font-size: 14pt; }
 
-.app-view-control{
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(50, 50, 50,1.0);
-    background-gradient-end: rgba(30, 30, 30,1.0);
-    border-image: none;
-    color: #d7d7d7;
-    border: 1px solid rgba(30,30,30,0.1);
-    padding: 4px 24px;
-    font-size: 13px;
-    font-weight: normal;
-}
+/* End Session Dialog */
+.end-session-dialog {
+  spacing: 42px;
+  border: 0px solid rgba(238, 238, 236, 0.2); }
 
-.app-view-control:hover {
-    border: 1px;
-    background-gradient-start: rgba(90, 90, 90,1);
-    background-gradient-end: rgba(60, 60, 60,1);
-}
+.end-session-dialog-list {
+  padding-top: 20px; }
 
-.app-view-control:first-child:ltr:focus,
-.app-view-control:last-child:rtl:focus {
-    border-right-width: 1px;
-    border-image:none;
-    background-gradient-start: rgba(50, 50, 50,1);
-    background-gradient-end: rgba(30, 30, 30,1);
-}
+.end-session-dialog-layout {
+  padding-left: 17px; }
+  .end-session-dialog-layout:rtl {
+    padding-right: 17px; }
 
-.app-view-control:checked {
-    border: 0px;
-    background-gradient-start: rgba(90, 90, 90,1);
-    background-gradient-end: rgba(60, 60, 60,1);
-}
+.end-session-dialog-description {
+  width: 28em;
+  padding-bottom: 10px; }
+  .end-session-dialog-description:rtl {
+    text-align: right; }
 
-.candidate-page-button:active,
-.candidate-page-button:pressed,
-.modal-dialog-button:active,
-.modal-dialog-button:pressed{
-    background-gradient-start: rgba(215, 215, 215, 1);
-    background-gradient-end: rgba(185, 185, 185, 0.85);
-}
+.end-session-dialog-warning {
+  width: 28em;
+  color: #f57900;
+  padding-top: 6px; }
+  .end-session-dialog-warning:rtl {
+    text-align: right; }
 
-.candidate-page-button:insensitive,
-.notification-button:insensitive,
-.notification-icon-button:insensitive,
-.modal-dialog-button:insensitive {
-    border-color: rgba(0,0,0,0);
-    color: #9f9f9f;
-    background-gradient-direction: none;
-    background-color: rgba(102, 102, 102, 0.15);
-}
+.end-session-dialog-logout-icon {
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  background-size: contain; }
 
-/* Common radio */
+.end-session-dialog-shutdown-icon {
+  color: #3C3C3C;
+  width: 48px;
+  height: 48px; }
 
-#searchEntry,
-.app-view-controls,
-#screenShieldNotifications {
-    border-radius: 4px;
-}
+.end-session-dialog-inhibitor-layout {
+  spacing: 16px;
+  max-height: 200px;
+  padding-right: 65px;
+  padding-left: 65px; }
 
-.app-view-control:first-child:ltr,
-.app-view-control:last-child:rtl {
-    border-radius: 18px 0px 0px 18px;
-    border-right-width: 0px;
-}
+.end-session-dialog-session-list,
+.end-session-dialog-app-list {
+  spacing: 1em; }
 
-.app-view-control:last-child:ltr,
-.app-view-control:first-child:rtl {
-    border-radius: 0px 18px 18px 0px;
-}
+.end-session-dialog-list-header {
+  font-weight: bold; }
+  .end-session-dialog-list-header:rtl {
+    text-align: right; }
 
-/* Entries */
+.end-session-dialog-app-list-item,
+.end-session-dialog-session-list-item {
+  spacing: 1em; }
 
-#searchEntry,
-.login-dialog StEntry,
-.notification StEntry,
-.modal-dialog StEntry {
-    color: rgb(64, 64, 64);
-    caret-color: rgb(64, 64, 64);
-    font-size: 12pt;
-    caret-size: 1px;
-    selected-color: white;
-    padding: 4px 12px;
-}
+.end-session-dialog-app-list-item-name,
+.end-session-dialog-session-list-item-name {
+  font-weight: bold; }
 
-#searchEntry,
-.login-dialog StEntry,
-.run-dialog-entry,
-.notification StEntry {
-    border: 0px solid rgba(245,245,245,0.2);
-    background-gradient-start: rgba(245,245,245,0.15);
-    background-gradient-end: rgba(245,245,245,0.15);
-    background-gradient-direction: vertical;
-    transition-duration: 300ms;
-    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
-}
+.end-session-dialog-app-list-item-description {
+  color: #5A5A5A;
+  font-size: 10pt; }
 
-#searchEntry:focus,
-#searchEntry:hover,
-.login-dialog StEntry:focus,
-.notification StEntry:focus,
-.modal-dialog StEntry {
-    border: 0px solid rgb(136,138,133);
-    background-gradient-start: rgba(245,245,245, 0.9);
-    background-gradient-end: rgba(245,245,245, 0.9);
-    background-gradient-direction: vertical;
-    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
-}
+/* Normal */
+.end-session-dialog .modal-dialog-button:first-child {
+    background-color: rgb(239,239,239);
+    border-color: rgb(239,239,239);
+    color: #3C3C3C; }
+.end-session-dialog .modal-dialog-button:first-child:focus,
+.end-session-dialog .modal-dialog-button:first-child:hover {
+    background-color: rgb(249,249,249);
+    border-color: rgb(249,249,249); }
+.end-session-dialog .modal-dialog-button:first-child:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF; }
+.end-session-dialog .modal-dialog-button:first-child:active {
+    background-color: rgb(234,234,234);
+    border-color: rgb(234,234,234); }
 
-.login-dialog StEntry:focus,
-.modal-dialog StEntry:focus {
-    border: 1px solid rgba(41, 128, 185,1.0);
-}
+/* Restart */
+.end-session-dialog .modal-dialog-button {
+    background-color: rgb(39, 174, 96);
+    border-color: rgb(39, 174, 96);
+    color: #FAFAFA; }
+.end-session-dialog .modal-dialog-button:focus,
+.end-session-dialog .modal-dialog-button:hover {
+    background-color: rgb(49, 184, 106);
+    border-color: rgb(49, 184, 106); }
+.end-session-dialog .modal-dialog-button:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF; }
+.end-session-dialog .modal-dialog-button:active {
+    background-color: rgb(34, 169, 91);
+    border-color: rgb(34, 169, 91); }
 
-.notification StEntry:focus{
-    border: 0px solid rgba(41, 128, 185,1.0);
-}
+/* Poweroff */
+.end-session-dialog .modal-dialog-button:last-child {
+    background-color: rgb(209,72,65);
+    border-color: rgb(209,72,65);
+    color: #FAFAFA; }
+.end-session-dialog .modal-dialog-button:last-child:focus,
+.end-session-dialog .modal-dialog-button:last-child:hover {
+    background-color: rgb(219,82,75);
+    border-color: rgb(219,82,75); }
+.end-session-dialog .modal-dialog-button:last-child:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF; }
+.end-session-dialog .modal-dialog-button:last-child:active {
+    background-color: rgb(204,67,61);
+    border-color: rgb(204,67,61); }
 
-#searchEntry {
-    border-color: rgba(245,245,245,0.3);
-    color: rgb(192, 192, 192);
-    caret-color: rgb(192, 192, 192);
-}
+/* ShellMountOperation Dialogs */
+.shell-mount-operation-icon {
+  icon-size: 48px; }
 
-#searchEntry:hover {
-    color: rgb(128, 128, 128);
-    caret-color: rgb(128, 128, 128);
-}
+.show-processes-dialog,
+.mount-question-dialog {
+  spacing: 24px; }
 
-#searchEntry:focus {
-    color: rgb(64, 64, 64);
-    caret-color: rgb(64, 64, 64);
-    font-weight: bold;
-    transition-duration: 0ms;
-}
+.show-processes-dialog-subject,
+.mount-question-dialog-subject {
+  padding-top: 10px;
+  padding-left: 17px;
+  padding-bottom: 6px; }
 
-.login-dialog StEntry,
-.notification StEntry,
-.modal-dialog StEntry {
-    border-radius: 5px;
-    padding: 4px 4px;
-    border: 1px;
-}
+.mount-question-dialog-subject {
+  max-width: 500px; }
 
-.prompt-dialog-password-entry .capslock-warning,
-.login-dialog-prompt-entry .capslock-warning {
-    icon-size: 16px;
-    warning-color: rgba(231, 76, 60,1.0);
-    padding: 0 4px;
-}
+.show-processes-dialog-subject:rtl,
+.mount-question-dialog-subject:rtl {
+  padding-left: 0px;
+  padding-right: 17px; }
 
-.login-dialog StEntry:insensitive,
-.modal-dialog StEntry:insensitive {
-    border-color: #666666;
-    color: #9f9f9f;
-    border: 1px solid #9f9f9f;
-    background-gradient-direction: none;
-    background-color: rgba(102, 102, 102, 0.15);
-    box-shadow: inset 0 0 rgba(0,0,0,1.0);
-}
+.show-processes-dialog-description,
+.mount-question-dialog-description {
+  padding-left: 17px;
+  width: 28em; }
 
-/* Panel */
+.show-processes-dialog-description:rtl,
+.mount-question-dialog-description:rtl {
+  padding-right: 17px; }
 
+.show-processes-dialog-app-list {
+  max-height: 200px;
+  padding-top: 24px;
+  padding-left: 49px;
+  padding-right: 32px; }
+
+.show-processes-dialog-app-list:rtl {
+  padding-right: 49px;
+  padding-left: 32px; }
+
+.show-processes-dialog-app-list-item {
+  color: #d6d6d1; }
+  .show-processes-dialog-app-list-item:hover {
+    color: #eeeeec; }
+  .show-processes-dialog-app-list-item:ltr {
+    padding-right: 1em; }
+  .show-processes-dialog-app-list-item:rtl {
+    padding-left: 1em; }
+
+.show-processes-dialog-app-list-item-icon:ltr {
+  padding-right: 17px; }
+.show-processes-dialog-app-list-item-icon:rtl {
+  padding-left: 17px; }
+
+.show-processes-dialog-app-list-item-name {
+  font-size: 10pt; }
+
+/* Password or Authentication Dialog */
+.prompt-dialog {
+  width: 500px;
+  border: 0px; }
+
+.prompt-dialog-main-layout {
+  spacing: 24px;
+  padding: 10px; }
+
+.prompt-dialog-message-layout {
+  spacing: 16px; }
+
+.prompt-dialog-headline {
+  font-weight: bold;
+  color: #3C3C3C; }
+
+.prompt-dialog-description:rtl {
+  text-align: right; }
+
+.prompt-dialog-password-box {
+  spacing: 1em;
+  padding-bottom: 1em; }
+
+.prompt-dialog-error-label {
+  font-size: 10pt;
+  color: #D14841;
+  padding-bottom: 8px; }
+
+.prompt-dialog-info-label {
+  font-size: 10pt;
+  padding-bottom: 8px; }
+
+.prompt-dialog StEntry {
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0);
+    color: #3C3C3C; }
+
+.prompt-dialog .modal-dialog-button:last-child {
+    background-color: rgb(209,72,65);
+    border-color: rgb(209,72,65);
+    color: #FAFAFA; }
+.prompt-dialog .modal-dialog-button:last-child:focus,
+.prompt-dialog .modal-dialog-button:last-child:hover {
+    background-color: rgb(219,82,75);
+    border-color: rgb(219,82,75); }
+.prompt-dialog .modal-dialog-button:last-child:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF; }
+.prompt-dialog .modal-dialog-button:last-child:active {
+    background-color: rgb(204,67,61);
+    border-color: rgb(204,67,61); }
+
+.hidden {
+  color: transparent; }
+
+.prompt-dialog-null-label {
+  font-size: 10pt;
+  padding-bottom: 8px; }
+
+/* Polkit Dialog */
+.polkit-dialog-user-layout {
+  padding-left: 10px;
+  spacing: 10px; }
+  .polkit-dialog-user-layout:rtl {
+    padding-left: 0px;
+    padding-right: 10px; }
+
+.polkit-dialog-user-root-label {
+  color: #f57900; }
+
+.polkit-dialog-user-icon {
+  border-radius: 5px;
+  background-size: contain;
+  width: 48px;
+  height: 48px; }
+
+/* Network Agent Dialog */
+.network-dialog-secret-table {
+  spacing-rows: 15px;
+  spacing-columns: 1em; }
+
+.keyring-dialog-control-table {
+  spacing-rows: 15px;
+  spacing-columns: 1em; }
+
+/* Popvers/Menus */
+.popup-menu {
+    min-width: 200px; }
+.popup-menu .popup-sub-menu {
+    background-color: #343a3a;
+    box-shadow: inset 0 -1px 0px #282c2c; }
+.popup-menu .popup-menu-content {
+    padding: 1em 0em; }
+.popup-menu .popup-menu-item {
+    spacing: 12px; }
+.popup-menu .popup-menu-item:ltr {
+    padding: .4em 1.75em .4em 0em; }
+.popup-menu .popup-menu-item:rtl {
+    padding: .4em 0em .4em 1.75em; }
+.popup-menu .popup-menu-item:checked {
+    background-color: #2969B0;
+    box-shadow: inset 0 1px 0px transparent;
+    font-weight: normal; }
+.popup-menu .popup-menu-item.selected {
+    background-color: #2C82C9;
+    color: #eeeeec; }
+.popup-menu .popup-menu-item:active {
+    background-color: #2C82C9;
+    color: #ffffff; }
+.popup-menu .popup-menu-item:insensitive {
+    color: rgba(238, 238, 236, 0.5); }
+.popup-menu .popup-inactive-menu-item {
+    color: #eeeeec; }
+.popup-menu .popup-inactive-menu-item:insensitive {
+      color: rgba(238, 238, 236, 0.5); }
+.popup-menu.panel-menu {
+    -boxpointer-gap: 4px;
+    margin-bottom: 1.75em; }
+
+.popup-menu-ornament {
+  text-align: right;
+  width: 1em; }
+
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+  -arrow-border-radius: 3px;
+  -arrow-background-color: rgba(30,30,30,0.95);
+  -arrow-border-width: 0px;
+  -arrow-border-color: #1c1f1f;
+  -arrow-base: 0px;
+  -arrow-rise: 3px;
+  -arrow-box-shadow: 0 1px 3px black; }
+
+.popup-separator-menu-item {
+  height: 1px;
+  margin: 6px 64px;
+  background-color: transparent;
+  border-color: #343a3a;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+
+.background-menu {
+  -boxpointer-gap: 4px;
+  -arrow-rise: 0px; }
+
+/* fallback menu
+- odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
+  app menu inside the main app window itself rather than the top bar
+*/
+/* OSD */
+.osd-window {
+  text-align: center;
+  font-weight: bold;
+  spacing: 1em;
+  margin: 32px;
+  min-width: 64px;
+  min-height: 64px; }
+.osd-window .osd-monitor-label {
+    font-size: 3em; }
+.osd-window .level {
+    height: 0.6em;
+    border-radius: 0.3em;
+    background-color: rgba(11, 12, 13, 0.5);
+    color: #eeeeec; }
+
+/* App Switcher */
+.switcher-popup {
+    padding: 8px;
+    spacing: 16px; }
+
+.switcher-list-item-container {
+  spacing: 8px; }
+
+.switcher-list .item-box {
+  padding: 8px;
+  border-radius: 4px; }
+
+.switcher-list .item-box:outlined {
+  padding: 6px;
+  border: 2px solid #040404; }
+
+.switcher-list .item-box:selected {
+  background-color: rgba(41, 105, 176, 0.5);
+  color: #ffffff; }
+
+.switcher-list .thumbnail-box {
+  padding: 2px;
+  spacing: 4px; }
+
+.switcher-list .thumbnail {
+  width: 256px; }
+
+.switcher-list .separator {
+  width: 1px;
+  background: #1c1f1f; }
+
+.switcher-arrow {
+  border-color: transparent;
+  color: #1c1f1f; }
+
+.switcher-arrow:highlighted {
+  color: #eeeeec; }
+
+.input-source-switcher-symbol {
+  font-size: 34pt;
+  width: 96px;
+  height: 96px; }
+
+/* Workspace Switcher */
+.workspace-switcher-group {
+  padding: 12px; }
+
+.workspace-switcher {
+  background: transparent;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  spacing: 8px; }
+
+.ws-switcher-active-up, .ws-switcher-active-down {
+  height: 50px;
+  background-color: #2C82C9;
+  color: #ffffff;
+  background-size: 32px;
+  border-radius: 8px; }
+
+.ws-switcher-box {
+  height: 50px;
+  border: 1px solid rgba(238, 238, 236, 0.1);
+  background: transparent;
+  border-radius: 8px; }
+
+.osd-window,
+.resize-popup,
+.switcher-list, .workspace-switcher-container {
+  color: #eeeeec;
+  background-color: rgba(0,0,0,0.7);
+  border: 0px solid rgba(238, 238, 236, 0.2);
+  font-weight: normal;
+  border-radius: 12px;
+  padding: 12px; }
+
+/* Tiled window previews */
+.tile-preview {
+  background-color: rgba(33, 93, 156, 0.5);
+  border: 1px solid #2C82C9; }
+
+.tile-preview-left.on-primary {
+  border-radius: 6px 6px 0 0; }
+
+.tile-preview-right.on-primary {
+  border-radius: 0 6px 0 0; }
+
+.tile-preview-left.tile-preview-right.on-primary {
+  border-radius: 6px 6px 0 0; }
+
+/* TOP BAR */
 #panel {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(40, 40, 40,0.8);
-    background-gradient-end: rgba(30, 30, 30, 0.8);
+    background-color: rgba(0,0,0,0);
     font-weight: normal;
-    height: 24px;
-}
-
-#panel:overview,
-#panel.unlock-screen,
-#panel.login-screen {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0);
-    background-gradient-end: rgba(0,0,0,0);
-    background-color: transparent;
-    transition-duration: 100ms;
-}
-
-#panelLeft, #panelCenter {
-    spacing: 4px;
-}
-
-#panelLeft:ltr {
-    padding-right: 4px;
-}
-
-#panelLeft:rtl {
-    padding-left: 4px;
-}
-
-#panelRight:ltr {
-    padding-left: 4px;
-}
-
-#panelRight:rtl {
-    padding-right: 4px;
-}
-
-.panel-corner {
-    -panel-corner-radius: 0px;
-    -panel-corner-background-color: black;
-    -panel-corner-border-width: 0px;
-    -panel-corner-border-color: transparent;
-}
-
-.panel-corner:active,
-.panel-corner:overview,
-.panel-corner:focus {
-    -panel-corner-border-color: rgba(255,255,255,0.8);
-}
-
-.panel-corner.lock-screen,
-.panel-corner.unlock-screen,
-.panel-corner.login-screen {
+    height: 1.7em; }
+#panel:overview {
+    background-color: transparent; }
+#panel .unlock-screen,
+#panel .login-screen,
+#panel .lock-screen {
+    background-color: transparent; }
+#panel #panelLeft,
+#panel #panelCenter {
+    spacing: 4px; }
+#panel .panel-corner,
+#panel .panel-corner:active,
+#panel .panel-corner:overview,
+#panel .panel-corner:focus,
+#panel .panel-corner.lock-screen,
+#panel .panel-corner.login-screen,
+#panel .panel-corner.unlock-screen {
+    -panel-corner-radius: 30px;
     -panel-corner-background-color: transparent;
-    -panel-corner-border-color: transparent;
-}
-
-#appMenu {
-    spinner-image: url("process-working.svg");
-    spacing: 4px;
-    font-weight: normal;
-}
-
-/* used for the app menu header only */
-.label-shadow {
-    color: rgba(0,0,0,0);
-}
-
-.panel-button #appMenuIcon {
-    app-icon-bottom-clip: 1px;
-}
-
-.panel-button:active #appMenuIcon,
-.panel-button:checked #appMenuIcon,
-.panel-button:focus #appMenuIcon {
-    app-icon-bottom-clip: 2px;
-}
-
-.app-menu-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.panel-button {
+    -panel-corner-border-color: transparent; }
+#panel .panel-button {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: normal;
-    color: #D7D7D7;
-    transition-duration: 100ms;
-}
-
-#panel.unlock-screen .panel-button,
-#panel.lock-screen .panel-button,
-#panel.login-screen .panel-button {
-    color: #e6e6e6;
-}
-
-#panel.unlock-screen .panel-button:hover,
-#panel.lock-screen .panel-button:hover,
-#panel.login-screen .panel-button:hover,
-#panel.unlock-screen .panel-button:active,
-#panel.lock-screen .panel-button:active,
-#panel.login-screen .panel-button:active,
-#panel.unlock-screen .panel-button:focus,
-#panel.lock-screen .panel-button:focus,
-#panel.login-screen .panel-button:focus {
-    color: white;
-}
-
-.panel-button:hover {
-    color: white;
-    text-shadow: white 0px 0px 0.5px;
-}
-
-.panel-button:active,
-.panel-button:overview,
-.panel-button:focus {
-    border-image: none;
-    background-image: none;
-    color: white;
-    text-shadow: white 0px 0px 0.5px;
-}
-
-.panel-status-button:active,
-.panel-status-button:checked,
-.panel-status-button:focus {
-    background-image: none;
-}
-
-.panel-button:active > .system-status-icon,
-.panel-button:checked > .system-status-icon,
-.panel-button:focus > .system-status-icon {
-    icon-shadow: black 0px 2px 2px;
-}
-
-.panel-menu {
-    -boxpointer-gap: 4px;
-}
-
-.panel-status-indicators-box,
-.panel-status-menu-box {
-    spacing: 2px;
-}
-
-.system-status-icon {
+    color: #F0F0F0;
+    transition-duration: 100ms; }
+#panel .panel-button .app-menu-icon {
+    -st-icon-style: symbolic;
+    margin-left: 4px;
+    margin-right: 4px; }
+#panel .panel-button:hover {
+    color: white; }
+#panel .panel-button:active,
+#panel .panel-button:overview,
+#panel .panel-button:focus,
+#panel .panel-button:checked {
+    text-shadow: 0px 0px 5px white;
+    background-color: rgba(0, 0, 0, 0.01);
+    box-shadow: inset 0 -2px 0px transparent;
+    color: white; }
+#panel .panel-button:active > .system-status-icon,
+#panel .panel-button:overview > .system-status-icon,
+#panel .panel-button:focus > .system-status-icon,
+#panel .panel-button:checked > .system-status-icon {
+    icon-shadow: black 0 2px 2px; }
+#panel .panel-button .system-status-icon {
     icon-size: 1.09em;
-    padding: 0 5px;
-}
+    padding: 0 5px; }
+.unlock-screen #panel .panel-button,
+.login-screen #panel .panel-button,
+.lock-screen #panel .panel-button {
+    color: white; }
+.unlock-screen #panel .panel-button:focus,
+.unlock-screen #panel .panel-button:hover,
+.unlock-screen #panel .panel-button:active,
+.login-screen #panel .panel-button:focus,
+.login-screen #panel .panel-button:hover,
+.login-screen #panel .panel-button:active,
+.lock-screen #panel .panel-button:focus,
+.lock-screen #panel .panel-button:hover,
+.lock-screen #panel .panel-button:active {
+    color: white; }
+#panel .panel-status-indicators-box,
+#panel .panel-status-menu-box {
+    spacing: 2px; }
+#panel .screencast-indicator {
+    color: #f57900; }
 
-.aggregate-menu {
-    width: 360px;
-}
+#calendarArea {
+  padding: 0.75em 1.0em; }
 
-.aggregate-menu .popup-menu-icon {
-    padding: 0 0px;
-}
+.calendar {
+  margin-bottom: 1em; }
+
+.calendar,
+.datemenu-today-button,
+.datemenu-displays-box,
+.message-list-sections {
+  margin: 0 1.5em; }
+
+.datemenu-calendar-column {
+  spacing: 0.5em; }
+
+.datemenu-displays-section {
+  padding-bottom: 3em; }
+
+.datemenu-today-button,
+.world-clocks-button,
+.message-list-section-title {
+  border-radius: 4px;
+  padding: .4em; }
+
+.message-list-section-list:ltr {
+  padding-left: .4em; }
+
+.message-list-section-list:rtl {
+  padding-right: .4em; }
+
+.datemenu-today-button:hover, .datemenu-today-button:focus,
+.world-clocks-button:hover,
+.world-clocks-button:focus,
+.message-list-section-title:hover,
+.message-list-section-title:focus {
+  background-color: #454c4c; }
+.datemenu-today-button:active,
+.world-clocks-button:active,
+.message-list-section-title:active {
+  color: white;
+  background-color: #2C82C9; }
+
+.datemenu-today-button .date-label {
+  font-size: 1.5em; }
+
+.world-clocks-header,
+.message-list-section-title {
+  color: #FAFAFA;
+  font-weight: bold; }
+
+.world-clocks-grid {
+  spacing-rows: 0.4em; }
+
+.calendar-month-label {
+  color: #e2e2df;
+  font-weight: bold;
+  padding: 8px 0; }
+
+.pager-button {
+  color: white;
+  background-color: transparent;
+  width: 32px;
+  border-radius: 4px; }
+  .pager-button:hover, .pager-button:focus {
+    background-color: rgba(238, 238, 236, 0.05); }
+  .pager-button:active {
+    background-color: rgba(57, 63, 63, 0.05); }
+
+.calendar-change-month-back {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-left.svg"); }
+  .calendar-change-month-back:rtl {
+    background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-right.svg"); }
+
+.calendar-change-month-forward {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-right.svg"); }
+  .calendar-change-month-forward:rtl {
+    background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-left.svg"); }
+
+.calendar-day-base {
+    font-size: 80%;
+    text-align: center;
+    width: 2.4em;
+    height: 2.4em;
+    padding: 0.1em;
+    margin: 2px;
+    border-radius: 1.4em; }
+.calendar-day-base:hover,
+.calendar-day-base:focus {
+    background-color: #454c4c; }
+.calendar-day-base:active {
+    color: white;
+    background-color: #2C82C9;
+    border-color: transparent; }
+.calendar-day-base.calendar-day-heading {
+    color: #8e8e80;
+    margin-top: 1em;
+    font-size: 70%; }
+
+.calendar-day {
+    border-width: 0; }
+
+.calendar-day-top {
+    border-top-width: 1px; }
+
+.calendar-day-left {
+    border-left-width: 1px; }
+
+.calendar-nonwork-day {
+    color: #939695; }
+
+.calendar-today {
+    font-weight: bold;
+    border: 0px solid rgba(28, 31, 31, 0.5); }
+
+.calendar-day-with-events {
+    color: white;
+    font-weight: bold;
+    background: rgba(226, 80, 65, 1); }
+
+.calendar-other-month-day {
+    color: rgba(238, 238, 236, 0.15);
+    opacity: 0.5; }
+
+/* Message list */
+.message-list {
+    width: 420px; }
+
+.message-list-sections {
+    spacing: 1.5em; }
+
+.message-list-section,
+.message-list-section-list {
+    spacing: 0.7em; }
+
+.message-list-section-title-box {
+    spacing: 0.4em; }
+
+.message-list-section-close > StIcon {
+    icon-size: 16px;
+    border-radius: 8px;
+    color: #FAFAFA;
+    background-color: transparent; }
+
+/* FIXME: how do you do this in sass? */
+.message-list-section-close:hover > StIcon,
+.message-list-section-close:focus > StIcon {
+    background-color: white;
+    color: #3C3C3C; }
+
+.message {
+  background-color: transparent;
+  border-radius: 3px; }
+.message:hover,
+.message:focus {
+    background-color: #454c4c; }
+
+.message-icon-bin {
+  padding: 8px 0px 8px 8px; }
+  .message-icon-bin:rtl {
+    padding: 8px 8px 8px 0px; }
+
+.message-icon-bin > StIcon {
+  icon-size: 48px; }
+
+.message-secondary-bin {
+  color: #8e8e80; }
+
+.message-secondary-bin > StIcon {
+  icon-size: 16px; }
+
+.message-title {
+  font-weight: bold; }
+
+.message-content {
+  padding: 8px; }
 
 .system-switch-user-submenu-icon {
-    icon-size: 24px;
-    border: 1px solid #8b8b8b;
-}
+  icon-size: 24px;
+  border: 1px solid rgba(238, 238, 236, 0.4); }
+
+#appMenu {
+    spinner-image: url("resource:///org/gnome/shell/theme/process-working.svg");
+    spacing: 4px; }
+#appMenu .label-shadow {
+    color: transparent; }
+
+.aggregate-menu {
+    width: 360px; }
+.aggregate-menu .popup-menu-icon {
+    padding: 0 4px; }
 
 .system-menu-action {
-    color: #D7D7D7;
-    border-radius: 32px; /* wish we could do 50% */
-    padding: 5px;
-    border: 0px solid #5f5f5f; /* using rgba() is flaky unfortunately */
-}
-
+    color: #eeeeec;
+    border-radius: 32px;
+    /* wish we could do 50% */
+    padding: 13px;
+    border: 1px solid #282c2c; }
 .system-menu-action:hover,
-.system-menu-action:active,
 .system-menu-action:focus {
-    color: #2980b9;
-    background-color: transparent;
+    background-color: rgba(238, 238, 236, 0.1);
+    color: #eeeeec;
     border: none;
-}
-
-.system-menu-action:last-child:hover,
-.system-menu-action:last-child:active,
-.system-menu-action:last-child:focus{
-    color: #e74c3c;
-    background-color: transparent;
-    border: none;
-}
-
+    padding: 14px; }
+.system-menu-action:active {
+    background-color: #2C82C9;
+    color: #ffffff; }
 .system-menu-action > StIcon {
-    icon-size: 30px;
-}
+    icon-size: 16px; }
 
-.screencast-indicator {
-    color: #ff0000;
-}
+.ripple-box {
+  width: 52px;
+  height: 52px;
+  background-image: url("resource:///org/gnome/shell/theme/corner-ripple-ltr.png");
+  background-size: contain; }
 
-/* Overview */
+.ripple-box:rtl {
+  background-image: url("resource:///org/gnome/shell/theme/corner-ripple-rtl.png"); }
+
+.popup-menu-arrow {
+  width: 16px;
+  height: 16px; }
+
+.popup-menu-icon {
+  icon-size: 1.09em; }
+
+.window-close {
+  background-image: url("close-window.svg");
+  background-size: 32px;
+  height: 32px;
+  width: 32px; }
+
+.window-close {
+  -shell-close-overlap: 16px; }
+  .window-close:rtl {
+    -st-background-image-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); }
+
+/* NETWORK DIALOGS */
+.nm-dialog {
+  max-height: 500px;
+  min-height: 450px;
+  min-width: 470px; }
+
+.nm-dialog StScrollView StScrollBar {
+    min-width: 0px;
+    min-height: 0px; }
+
+.nm-dialog-content {
+  spacing: 20px; }
+
+.nm-dialog-header-hbox {
+  spacing: 10px; }
+
+.nm-dialog-airplane-box {
+  spacing: 12px; }
+
+.nm-dialog-airplane-headline {
+  font-weight: bold;
+  text-align: center; }
+
+.nm-dialog-airplane-text {
+  color: #eeeeec; }
+
+.nm-dialog-header-icon {
+  icon-size: 32px; }
+
+.nm-dialog-scroll-view {
+    border: 1px solid #ddd;
+    border-radius: 0px; }
+
+.nm-dialog-header {
+  font-weight: bold; }
+
+.nm-dialog-item {
+  font-size: 12pt;
+  border-bottom: 0px solid #1c1f1f;
+  padding: 12px;
+  spacing: 20px; }
+
+.nm-dialog-item:selected {
+  background-color: #2C82C9;
+  color: #ffffff; }
+
+.nm-dialog-icons {
+  spacing: .5em; }
+
+.nm-dialog-icon {
+    icon-size: 16px; }
+
+.nm-dialog .modal-dialog-button:last-child {
+    background-color: rgb(41, 105, 176);
+    border-color: rgb(41, 105, 176);
+    color: #FAFAFA; }
+.nm-dialog .modal-dialog-button:last-child:focus,
+.nm-dialog .modal-dialog-button:last-child:hover {
+    background-color: rgb(51, 115, 186);
+    border-color: rgb(51, 115, 186); }
+.nm-dialog .modal-dialog-button:last-child:insensitive {
+    color: #D1D5D8;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF; }
+.nm-dialog .modal-dialog-button:last-child:active {
+    background-color: rgb(36,100,171);
+    border-color: rgb(36,100,171); }
+
+.no-networks-label {
+  color: #999999; }
+
+.no-networks-box {
+  spacing: 12px; }
+
+/* OVERVIEW */
 #overview {
-    spacing: 24px;
-}
+  spacing: 24px; }
 
 .overview-controls {
-    padding-bottom: 32px;
-}
-
-.workspace-thumbnails {
-    spacing: 11px;
-    visible-width: 32px; /* Amount visible before hovering */
-    border: 1px solid rgba(128, 128, 128, 0.4);
-    border-right: 0px;
-    border-radius: 9px 0px 0px 9px;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 11px 7px 11px 11px;
-}
-
-.workspace-thumbnails:rtl {
-    border-right: 1px;
-    border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
-    padding: 11px 11px 11px 7px;
-}
-
-.workspace-thumbnail-indicator {
-    border: 4px solid rgba(255,255,255,0.7);
-    border-radius: 4px;
-    padding: 1px;
-}
-
-.window-caption {
-    spacing: 25px;
-    background: rgba(30,30,30,0.5);
-    border-radius: 8px;
-    padding: 4px 12px;
-    font-weight:normal;
-    -shell-caption-spacing: 12px;
-    border: 0px solid rgba(0, 0, 0, 0);
-}
-
-.window-caption:hover {
-    border: 0px solid rgba(255, 255, 255, 0);
-    background: rgba(60,60,60,0.5);
-}
-
-.window-close {
-    background-image: url("close-window.svg");
-    background-size: 32px;
-    height: 32px;
-    width: 32px;
-}
-
-.notification-close {
-    background-image: url("close-window.svg");
-    background-size: 24px;
-    height: 32px;
-    width: 32px;
-}
-
-.window-close {
-    -shell-close-overlap: 16px;
-}
-
-.window-clone-border {
-    border: 4px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-}
-
-.notification-close {
-    /* we start out in the top right of the
-     * notification, inset.
-     *
-     * center is 32px/2 = 16px
-     *
-     * adjust left 2px
-     * adjust down 8px */
-
-    -shell-close-overlap-x: 14px;
-    -shell-close-overlap-y: -12px;
-}
-
-.notification-close:rtl {
-    /* as above, but starting out in the top left of the
-     * notification. */
-
-    -shell-close-overlap-x: -14px;
-}
-
-.window-close:rtl {
-    -st-background-image-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-}
+  padding-bottom: 32px; }
 
 .window-picker {
     -horizontal-spacing: 32px;
     -vertical-spacing: 32px;
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 48px;
-}
-
+    padding-bottom: 48px; }
 .window-picker.external-monitor {
-    padding: 32px;
-}
+    padding: 32px; }
 
-.messages-indicator {
-    color: #999999;
-    height: 32px;
-}
+.window-clone-border {
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0); }
 
-.messages-indicator-contents {
-    spacing: 12px;
-    padding-bottom: 12px;
-}
+.window-caption {
+    spacing: 25px;
+    color: #eeeeec;
+    background-color: rgba(30,30,30,0.5);
+    border-radius: 4px;
+    padding: 4px 12px;
+    -shell-caption-spacing: 12px; }
+.window-caption:hover {
+    border: 0px solid rgba(255, 255, 255, 0);
+    background: rgba(41,105,176,0.5); }
 
-.messages-indicator-contents:hover {
-    color: white;
-    text-shadow: black 0px 2px 2px;
-}
-
-.messages-indicator-highlight {
-    background-gradient-start: transparent;
-    background-gradient-end: #999999;
-    background-gradient-direction: vertical;
-
-    height: 6px;
-}
-
-/* Dash */
-
-#dash {
-    color: #5f5f5f;
-    font-size: 9pt;
-    padding: 4px 0px;
-    background-color: rgba(30, 30, 30, 0);
-    border: 1px solid rgba(128, 128, 128, 0.4);
-    border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
-}
-
-#dash:rtl {
-    border-left: 1px;
-    border-right: 0px;
-    border-radius: 9px 0px 0px 9px;
-}
-
-.placeholder {
-    background-image: url("dash-placeholder.svg");
-    background-size: contain;
-    height: 24px;
-}
-
-.empty-dash-drop-target {
-    width: 24px;
-    height: 24px;
-}
-
-/* Search Box */
-
-#searchEntry {
+.search-entry {
+    border-color: transparent;
     width: 320px;
-}
-
-.search-entry-icon {
+    padding: 7px 9px;
+    border-radius: 6px; }
+.search-entry:focus {
+    padding: 6px 8px;
+    border-width: 2px; }
+.search-entry .search-entry-icon {
     icon-size: 1em;
-    color: #c0c0c0;
-}
-
-#searchEntry:hover .search-entry-icon,
-#searchEntry:focus .search-entry-icon {
-    color: #8d8f8a;
-}
-
-/* Search Results */
-
-#searchResults {
-    padding: 20px 10px 0px 10px;
-    spacing: 18px;
-}
+    padding: 0 4px;
+    color: rgba(238, 238, 236, 0.7); }
+.search-entry:hover .search-entry-icon,
+.search-entry:focus .search-entry-icon {
+    color: rgba(30,30,30,0.7); }
 
 #searchResultsBin {
-    max-width: 1000px;
-}
+  max-width: 1000px; }
 
 #searchResultsContent {
-    padding-left: 20px;
-    padding-right: 20px;
-    spacing: 16px;
-}
+  padding-left: 20px;
+  padding-right: 20px;
+  spacing: 16px; }
 
 .search-section {
-    /* This should be equal to #searchResultsContent spacing */
-    spacing: 16px;
-}
-
-.search-section-separator {
-    -gradient-height: 1px;
-    -gradient-start: rgba(255,255,255,0);
-    -gradient-end: rgba(255,255,255,0.5);
-    -margin-horizontal: 1.5em;
-    height: 1px;
-}
+  spacing: 16px; }
 
 .search-section-content {
-    /* This is the space between the provider icon and the results container */
-    spacing: 32px;
-}
-
-.search-statustext {
-    color: #efefef;
-    font-size: 2em;
-    font-weight: bold;
-}
+  spacing: 32px; }
 
 .list-search-results {
-    spacing: 3px;
-}
+  spacing: 3px; }
+
+.search-section-separator {
+  -gradient-height: 1px;
+  -gradient-start: rgba(255, 255, 255, 0);
+  -gradient-end: rgba(255, 255, 255, 0.1);
+  -margin-horizontal: 1.5em;
+  height: 1px; }
+
+.list-search-result-content {
+  spacing: 12px;
+  padding: 12px; }
+
+.list-search-result-title {
+  font-size: 1.5em;
+  color: #e2e2df; }
+
+.list-search-result-description {
+  color: #cacac4; }
+
+.search-provider-icon {
+  padding: 15px; }
+
+.search-provider-icon-more {
+  width: 16px;
+  height: 16px;
+  background-image: url("resource:///org/gnome/shell/theme/more-results.svg"); }
+
+/* DASHBOARD */
+#dash {
+    font-size: 9pt;
+    color: #eeeeec;
+    background-color: rgba(0,0,0,0);
+    padding: 4px 0;
+    border: 0px solid rgba(128, 128, 128, 0.4);
+    border-left: 0px;
+    border-radius: 0px 8px 8px 0px; }
+#dash:rtl {
+    border-radius: 8px 0 0 8px; }
+#dash .placeholder {
+    background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    background-size: contain;
+    height: 24px; }
+#dash .empty-dash-drop-target {
+    width: 24px;
+    height: 24px; }
+
+.dash-item-container > StWidget {
+    padding: 4px 8px; }
 
 .dash-label {
     border-radius: 7px;
     padding: 4px 12px;
-    font-weight: normal;
-    background-color: rgba(0,0,0,0.5);
+    color: #eeeeec;
+    background-color: rgba(30,30,30,0.5);
     text-align: center;
-    -x-offset: 8px;
-}
+    -x-offset: 8px; }
 
-/* Application Launchers, Grid and List results */
-
+/* App Vault/Grid */
 .icon-grid {
     spacing: 30px;
     -shell-grid-horizontal-item-size: 136px;
-    -shell-grid-vertical-item-size: 136px;
-}
-
+    -shell-grid-vertical-item-size: 136px; }
 .icon-grid .overview-icon {
-    icon-size: 96px;
-}
-
-.app-display {
-    spacing: 20px;
-}
+    icon-size: 96px; }
 
 .app-view-controls {
-    padding-bottom: 32px;
-}
+    padding-bottom: 32px; }
 
 .app-view-control {
     padding: 4px 32px;
-}
+    color: #FAFAFA;
+    border: 0px;
+    background-color: rgba(0,0,0,0.15); }
+.app-view-control:active {
+    color: #FAFAFA;
+    background-color: rgba(20,20,20,0.5); }
+.app-view-control:checked {
+    background-color: rgba(0,0,0,0.4); }
+.app-view-control:first-child {
+    border-right-width: 0;
+    border-radius: 10px 0 0 10px; }
+.app-view-control:last-child {
+    border-radius: 0 10px 10px 0; }
 
-.app-view-control:focus {
-    padding: 3px 31px;
-}
+.search-provider-icon:active, .search-provider-icon:checked,
+.list-search-result:active,
+.list-search-result:checked {
+  background-color: rgba(23, 25, 26, 0.9); }
+.search-provider-icon:focus, .search-provider-icon:selected, .search-provider-icon:hover,
+.list-search-result:focus,
+.list-search-result:selected,
+.list-search-result:hover {
+  background-color: rgba(238, 238, 236, 0.1);
+  transition-duration: 200ms; }
 
-.search-display > StBoxLayout,
-.all-apps,
-.frequent-apps > StBoxLayout {
-    /* horizontal padding to make sure scrollbars or dash don't overlap content */
-    padding: 0px 88px 10px 88px;
-}
+.app-well-app:active .overview-icon, .app-well-app:checked .overview-icon,
+.app-well-app.app-folder:active .overview-icon,
+.app-well-app.app-folder:checked .overview-icon,
+.show-apps:active .overview-icon,
+.show-apps:checked .overview-icon,
+.grid-search-result:active .overview-icon,
+.grid-search-result:checked .overview-icon {
+  background-color: rgba(230, 230, 230, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0); }
+.app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
+.app-well-app.app-folder:hover .overview-icon,
+.app-well-app.app-folder:focus .overview-icon,
+.app-well-app.app-folder:selected .overview-icon,
+.show-apps:hover .overview-icon,
+.show-apps:focus .overview-icon,
+.show-apps:selected .overview-icon,
+.grid-search-result:hover .overview-icon,
+.grid-search-result:focus .overview-icon,
+.grid-search-result:selected .overview-icon {
+  background-color: rgba(238, 238, 236, 0.1);
+  transition-duration: 0ms;
+  border-image: none;
+  background-image: none; }
 
-.page-indicator {
-    padding: 15px 20px;
-}
+.app-well-app-running-dot {
+  width: 10px;
+  height: 3px;
+  background-color: #2969B0;
+  margin-bottom: 2px; }
 
-.page-indicator .page-indicator-icon {
-    width: 18px;
-    height: 18px;
-    background-image: url(page-indicator-inactive.svg);
-}
-
-.page-indicator:hover .page-indicator-icon {
-    background-image: url(page-indicator-hover.svg);
-}
-
-.page-indicator:active .page-indicator-icon {
-    background-image: url(page-indicator-active.svg);
-}
-
-.page-indicator:checked .page-indicator-icon,
-.page-indicator:checked:active .page-indicator-icon {
-    background-image: url(page-indicator-checked.svg);
-}
-
-.no-frequent-applications-label {
-    font-size: 18pt;
-    color: #999999;
-}
-
-.app-folder-icon {
-    padding: 5px;
-}
-
-.dash-item-container > StButton {
-    padding: 4px 8px;
-}
-
-.list-search-result-content {
-    spacing: 12px;
-    padding: 12px;
-}
-
-.list-search-result-title {
-    font-weight: bold;
-    font-size: 14pt;
-    color: white;
-}
-
-.list-search-result-description {
-    color: #eeeeec;
-}
-
-.search-provider-icon-more {
-    width: 16px;
-    height: 16px;
-    background-image: url("more-results.svg");
-}
-
-.app-well-app > .overview-icon.overview-icon-with-label,
-.grid-search-result .overview-icon.overview-icon-with-label {
-    /* since the label controls its own spacing, it is visually more
-    consistent to use different padding values for top and bottom */
-    padding: 10px 8px 5px 8px;
-    spacing: 4px;
-}
-
-.app-well-app > .overview-icon,
-.show-apps > .overview-icon,
 .search-provider-icon,
-.list-search-result,
+.list-search-result, .app-well-app .overview-icon,
+.app-well-app.app-folder .overview-icon,
+.show-apps .overview-icon,
 .grid-search-result .overview-icon {
+    color: #eeeeec;
     border-radius: 4px;
     padding: 6px;
-    border: 0px rgba(255, 255, 255, 0);
+    border: 1px solid transparent;
     transition-duration: 100ms;
-    text-align: center;
-}
-
-.search-provider-icon {
-    padding: 15px;
-}
-
-.app-folder-popup {
-    -arrow-border-radius: 8px;
-    -arrow-background-color: rgba(0,0,0,0.3);
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
-}
-
-.app-folder-popup-bin {
-    padding: 5px;
-}
-
-.app-well-app.running > .overview-icon {
-    text-shadow: black 0px 2px 2px;
-    background-image: url("running-indicator.svg");
-    background-size: contain;
-}
+    text-align: center; }
 
 .app-well-app.app-folder > .overview-icon {
-    background-color: rgba(0,0,0,0.3);
-}
-
-.app-well-app:hover > .overview-icon,
-.show-apps:hover > .overview-icon,
-.search-provider-icon:hover,
-.list-search-result:hover,
-.grid-search-result:hover .overview-icon {
-    background-color: rgba(255,255,255,0.1);
-    text-shadow: rgb(30, 30, 30) 0px 1px 1px;
-    transition-duration: 100ms;
-    color: white;
-}
-
-.app-display .app-well-app > .overview-icon {
-    border-radius: 4px;
-}
-
-.list-search-result:hover .list-search-result-description {
-    text-shadow: rgba(0,0,0,0.8) 0px 1px 2px;
-}
-
-.show-apps {
-    padding: 4px 0;
-}
-
-.show-apps-icon {
-    color: #a0a0a0;
-}
-
-.show-apps:hover .show-apps-icon {
-    color: white;
-}
-
-.app-well-app:checked > .overview-icon,
-.app-well-app:active > .overview-icon,
-.show-apps:checked > .overview-icon,
-.show-apps:active > .overview-icon,
-.search-provider-icon:active,
-.list-search-result:active {
-    background-gradient-start: rgba(245, 245, 245, 0.1);
-    background-gradient-end: rgba(245, 245, 245, 0.1);
-    background-gradient-direction: horizontal;
-    border-radius: 4px;
-    box-shadow: 0px;
-}
+    background-color: rgba(46, 52, 54, 0.4); }
 
 .show-apps:checked .show-apps-icon,
 .show-apps:focus .show-apps-icon {
     color: white;
-    transition-duration: 100ms;
+    transition-duration: 100ms; }
+
+.app-folder-popup {
+  -arrow-border-radius: 8px;
+  -arrow-background-color: rgba(46, 52, 54, 0.3);
+  -arrow-base: 24px;
+  -arrow-rise: 11px; }
+
+.app-folder-popup-bin {
+  padding: 5px; }
+
+.app-folder-icon {
+  padding: 5px;
+  spacing-rows: 5px;
+  spacing-columns: 5px; }
+
+.page-indicator {
+  padding: 15px 20px; }
+  .page-indicator .page-indicator-icon {
+    width: 18px;
+    height: 18px;
+    background-image: url(resource:///org/gnome/shell/theme/page-indicator-inactive.svg); }
+  .page-indicator:hover .page-indicator-icon {
+    background-image: url(resource:///org/gnome/shell/theme/page-indicator-hover.svg); }
+  .page-indicator:active .page-indicator-icon {
+    background-image: url(resource:///org/gnome/shell/theme/page-indicator-active.svg); }
+  .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
+    background-image: url(resource:///org/gnome/shell/theme/page-indicator-checked.svg); }
+
+.app-well-app > .overview-icon.overview-icon-with-label,
+.grid-search-result .overview-icon.overview-icon-with-label {
+  padding: 10px 8px 5px 8px;
+  spacing: 4px; }
+
+.workspace-thumbnails {
+    visible-width: 32px;
+    spacing: 11px;
+    padding: 8px;
+    border-radius: 8px 0 0 8px; }
+.workspace-thumbnails:rtl {
+    border-radius: 0 8px 8px 0; }
+
+.workspace-thumbnail-indicator {
+  border: 3px solid rgba(250,250,250,0.5);
+  padding: 1px; }
+
+.search-display > StBoxLayout,
+.all-apps,
+.frequent-apps > StBoxLayout {
+  padding: 0px 88px 10px 88px; }
+
+.workspace-thumbnails {
+  color: #eeeeec;
+  background-color: rgba(0,0,0,0);
+  border: 0px solid rgba(250,250,250,0.2); }
+
+.search-statustext, .no-frequent-applications-label {
+  font-size: 2em;
+  font-weight: bold;
+  color: #eeeeec; }
+
+/* NOTIFICATIONS & MESSAGE TRAY */
+.url-highlighter {
+    link-color: #2a76c6; }
+
+.notification-banner {
+    font-size: 11pt;
+    width: 34em;
+    margin: 5px;
+    border-radius: 4px;
+    color: #eeeeec;
+    background-color: rgba(30,30,30,0.8);
+    border: 0px solid #1c1f1f; }
+.notification-banner:hover {
+    background-color: rgba(50,50,50,0.8); }
+.notification-banner:focus {
+    background-color: rgba(50,50,50,0.8); }
+.notification-banner .notification-icon {
+    padding: 5px; }
+.notification-banner .notification-content {
+    padding: 5px;
+    spacing: 5px; }
+.notification-banner .secondary-icon {
+    icon-size: 1.09em; }
+.notification-banner .notification-actions {
+    background-color: transparent;
+    padding-top: 0px;
+    spacing: 1px; }
+.notification-banner .notification-button {
+    padding: 4px 4px 5px;
+    background-color: #222728; }
+.notification-banner .notification-button:first-child {
+    border-radius: 0 0 0 6px; }
+.notification-banner .notification-button:last-child {
+    border-radius: 0 0 6px 0; }
+.notification-banner .notification-button:hover,
+.notification-banner .notification-buttonfocus {
+    background-color: #292f30; }
+.notification-banner .button {
+    color: #EFEFEF;
+    border: 0px;
+    background: rgba(41,105,176,0.8); }
+.notification-banner StEntry {
+    background-color: white;
 }
 
-.app-well-app:focus > .overview-icon,
-.grid-search-result:focus .overview-icon,
-.show-apps:focus > .overview-icon,
-.search-provider-icon:focus,
-.list-search-result:focus,
-.app-well-app:selected > .overview-icon,
-.grid-search-result:selected .overview-icon,
-.search-provider-icon:selected,
-.list-search-result:selected {
-    background-color: rgba(255,255,255,0.33);
-}
+.summary-source-counter {
+  font-size: 10pt;
+  font-weight: bold;
+  height: 1.6em;
+  width: 1.6em;
+  -shell-counter-overlap-x: 3px;
+  -shell-counter-overlap-y: 3px;
+  background-color: #2C82C9;
+  color: #ffffff;
+  border: 2px solid #eeeeec;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 0.9em; }
 
-/* LookingGlass */
+.secondary-icon {
+  icon-size: 1.09em; }
+
+.chat-body {
+  spacing: 5px; }
+
+.chat-response {
+  margin: 5px; }
+
+.chat-log-message {
+  color: #d6d6d1; }
+
+.chat-new-group {
+  padding-top: 1em; }
+
+.chat-received {
+  padding-left: 4px; }
+  .chat-received:rtl {
+    padding-left: 0px;
+    padding-right: 4px; }
+
+.chat-sent {
+  padding-left: 18pt;
+  color: #cacac4; }
+  .chat-sent:rtl {
+    padding-left: 0;
+    padding-right: 18pt; }
+
+.chat-meta-message {
+  padding-left: 4px;
+  font-size: 9pt;
+  font-weight: bold;
+  color: #bebeb6; }
+  .chat-meta-message:rtl {
+    padding-left: 0;
+    padding-right: 4px; }
+
+.hotplug-transient-box {
+  spacing: 6px;
+  padding: 2px 72px 2px 12px; }
+
+.hotplug-notification-item {
+  padding: 2px 10px; }
+  .hotplug-notification-item:focus {
+    padding: 1px 71px 1px 11px; }
+
+.hotplug-notification-item-icon {
+  icon-size: 24px;
+  padding: 2px 5px; }
+
+.hotplug-resident-box {
+  spacing: 8px; }
+
+.hotplug-resident-mount {
+  spacing: 8px;
+  border-radius: 4px; }
+  .hotplug-resident-mount:hover {
+    background-color: rgba(57, 63, 63, 0.3); }
+
+.hotplug-resident-mount-label {
+  color: inherit;
+  padding-left: 6px; }
+
+.hotplug-resident-mount-icon {
+  icon-size: 24px;
+  padding-left: 6px; }
+
+.hotplug-resident-eject-icon {
+  icon-size: 16px; }
+
+.hotplug-resident-eject-button {
+  padding: 7px;
+  border-radius: 5px;
+  color: pink; }
+
+/* Eeeky things */
+.legacy-tray {
+    background-color: rgba(0,0,0,0.7);
+    border: 0px solid #1c1f1f;
+    border-bottom-width: 0; }
+.legacy-tray:ltr {
+    border-radius: 0 6px 0 0;
+    border-left-width: 0; }
+.legacy-tray:rtl {
+    border-radius: 6px 0 0 0;
+    border-right-width: 0; }
+
+.legacy-tray-handle,
+.legacy-tray-icon {
+  padding: 6px; }
+  .legacy-tray-handle StIcon,
+  .legacy-tray-icon StIcon {
+    icon-size: 24px; }
+  .legacy-tray-handle:hover, .legacy-tray-handle:focus,
+  .legacy-tray-icon:hover,
+  .legacy-tray-icon:focus {
+    background-color: rgba(238, 238, 236, 0.1); }
+
+.legacy-tray-icon-box {
+  spacing: 12px; }
+  .legacy-tray-icon-box:ltr {
+    padding-left: 12px; }
+  .legacy-tray-icon-box:rtl {
+    padding-right: 12px; }
+  .legacy-tray-icon-box StButton {
+    width: 24px;
+    height: 24px; }
+
+.magnifier-zoom-region {
+  border: 2px solid #2C82C9; }
+  .magnifier-zoom-region.full-screen {
+    border-width: 0; }
+
+/* On-screen Keyboard */
+#keyboard {
+  background-color: rgba(46, 52, 54, 0.7); }
+
+.keyboard-layout {
+  spacing: 10px;
+  padding: 10px; }
+
+.keyboard-row {
+  spacing: 15px; }
+
+.keyboard-key {
+  color: #eeeeec;
+  background-color: #2e3436;
+  border-color: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 1px #454f52;
+  text-shadow: 0 1px black;
+  icon-shadow: 0 1px black;
+  min-height: 2em;
+  min-width: 2em;
+  font-size: 14pt;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #1c1f1f;
+  color: white; }
+  .keyboard-key:focus {
+    color: #eeeeec;
+    border-color: #2C82C9;
+    box-shadow: inset 0 1px #454f52;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black; }
+  .keyboard-key:hover, .keyboard-key:checked {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: #454f52;
+    box-shadow: inset 0 1px #5d696d;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black; }
+  .keyboard-key:active {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: #222728;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none; }
+  .keyboard-key:grayed {
+    background-color: #2e3436;
+    color: #eeeeec;
+    border-color: rgba(0, 0, 0, 0.7); }
+
+.keyboard-subkeys {
+  color: white;
+  padding: 5px;
+  -arrow-border-radius: 10px;
+  -arrow-background-color: rgba(46, 52, 54, 0.7);
+  -arrow-border-width: 2px;
+  -arrow-border-color: rgba(238, 238, 236, 0.2);
+  -arrow-base: 20px;
+  -arrow-rise: 10px;
+  -boxpointer-gap: 5px; }
+
+.candidate-popup-content {
+  padding: 0.5em;
+  spacing: 0.3em; }
+
+.candidate-index {
+  padding: 0 0.5em 0 0;
+  color: #d6d6d1; }
+
+.candidate-box {
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  border-radius: 4px; }
+  .candidate-box:selected, .candidate-box:hover {
+    background-color: #2C82C9;
+    color: #ffffff; }
+
+.candidate-page-button-box {
+  height: 2em; }
+  .vertical .candidate-page-button-box {
+    padding-top: 0.5em; }
+  .horizontal .candidate-page-button-box {
+    padding-left: 0.5em; }
+
+.candidate-page-button {
+  padding: 4px; }
+
+.candidate-page-button-previous {
+  border-radius: 4px 0px 0px 4px;
+  border-right-width: 0; }
+
+.candidate-page-button-next {
+  border-radius: 0px 4px 4px 0px; }
+
+.candidate-page-button-icon {
+  icon-size: 1em; }
+
+/* Auth Dialogs & Screen Shield */
+.framed-user-icon {
+  background-size: contain;
+  border: 2px solid #eeeeec;
+  color: #eeeeec;
+  border-radius: 3px; }
+  .framed-user-icon:hover {
+    border-color: white;
+    color: white; }
+
+.login-dialog-banner-view {
+  padding-top: 24px;
+  max-width: 23em; }
+
+.login-dialog {
+  border: none;
+  background-color: transparent; }
+  .login-dialog .modal-dialog-button-box {
+    spacing: 3px; }
+  .login-dialog .modal-dialog-button {
+    padding: 3px 18px; }
+    .login-dialog .modal-dialog-button:default {
+      color: #eeeeec;
+      background-color: rgba(33, 93, 156, 0.5);
+      border-color: rgba(0, 0, 0, 0.7);
+      box-shadow: inset 0 1px #454f52;
+      text-shadow: 0 1px black;
+      icon-shadow: 0 1px black; }
+      .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
+        color: white;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(33, 93, 156, 0.7);
+        box-shadow: inset 0 1px #5d696d;
+        text-shadow: 0 1px black;
+        icon-shadow: 0 1px black; }
+      .login-dialog .modal-dialog-button:default:active {
+        color: white;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: #1c5187;
+        box-shadow: none;
+        text-shadow: none;
+        icon-shadow: none; }
+      .login-dialog .modal-dialog-button:default:insensitive {
+        color: #939695;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(66, 71, 73, 0.7);
+        box-shadow: none;
+        text-shadow: none;
+        icon-shadow: none; }
+
+.login-dialog-logo-bin {
+  padding: 24px 0px; }
+
+.login-dialog-banner {
+  color: #d6d6d1; }
+
+.login-dialog-button-box {
+  spacing: 5px; }
+
+.login-dialog-message-warning {
+  color: #f57900; }
+
+.login-dialog-message-hint {
+  padding-top: 0;
+  padding-bottom: 20px; }
+
+.login-dialog-user-selection-box {
+  padding: 100px 0px; }
+  .login-dialog-user-selection-box .login-dialog-not-listed-label {
+    padding-left: 2px; }
+    .login-dialog-not-listed-button:focus .login-dialog-user-selection-box .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-user-selection-box .login-dialog-not-listed-label {
+      color: #eeeeec; }
+
+.login-dialog-not-listed-label {
+  font-size: 90%;
+  font-weight: bold;
+  color: #a6a69b;
+  padding-top: 1em; }
+
+.login-dialog-user-list-view {
+  -st-vfade-offset: 1em; }
+
+.login-dialog-user-list {
+  spacing: 12px;
+  padding: .2em;
+  width: 23em; }
+  .login-dialog-user-list:expanded .login-dialog-user-list-item:focus {
+    background-color: #2C82C9;
+    color: #ffffff; }
+  .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
+    border-right: 2px solid #2C82C9; }
+
+.login-dialog-user-list-item {
+  border-radius: 5px;
+  padding: .2em;
+  color: #a6a69b; }
+  .login-dialog-user-list-item:ltr {
+    padding-right: 1em; }
+  .login-dialog-user-list-item:rtl {
+    padding-left: 1em; }
+  .login-dialog-user-list-item:hover {
+    background-color: #2C82C9;
+    color: #ffffff; }
+  .login-dialog-user-list-item .login-dialog-timed-login-indicator {
+    height: 2px;
+    margin: 2px 0 0 0;
+    background-color: #eeeeec; }
+  .login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
+    background-color: #ffffff; }
+
+.login-dialog-username,
+.user-widget-label {
+  color: #eeeeec;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px; }
+
+.user-widget-label:ltr {
+  padding-left: 18px; }
+.user-widget-label:rtl {
+  padding-right: 18px; }
+
+.login-dialog-prompt-layout {
+  padding-top: 24px;
+  padding-bottom: 12px;
+  spacing: 8px;
+  width: 23em; }
+
+.login-dialog-prompt-label {
+  color: #bebeb6;
+  font-size: 110%;
+  padding-top: 1em; }
+
+.login-dialog-session-list-button StIcon {
+  icon-size: 1.25em; }
+
+.login-dialog-session-list-button {
+  color: #a6a69b; }
+  .login-dialog-session-list-button:hover, .login-dialog-session-list-button:focus {
+    color: #eeeeec; }
+  .login-dialog-session-list-button:active {
+    color: #747467; }
+
+.screen-shield-arrows {
+  padding-bottom: 3em; }
+
+.screen-shield-arrows Gjs_Arrow {
+  color: white;
+  width: 80px;
+  height: 48px;
+  -arrow-thickness: 12px;
+  -arrow-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+
+.screen-shield-clock {
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1.5em; }
+
+.screen-shield-clock-time {
+  font-size: 72pt;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.screen-shield-clock-date {
+  font-size: 28pt; }
+
+.screen-shield-notifications-container {
+  spacing: 6px;
+  width: 30em;
+  background-color: transparent;
+  max-height: 500px; }
+  .screen-shield-notifications-container .summary-notification-stack-scrollview {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .screen-shield-notifications-container .notification,
+  .screen-shield-notifications-container .screen-shield-notification-source {
+    padding: 12px 6px;
+    border: 1px solid rgba(238, 238, 236, 0.2);
+    background-color: rgba(46, 52, 54, 0.5);
+    color: #eeeeec;
+    border-radius: 4px; }
+  .screen-shield-notifications-container .notification {
+    margin-right: 15px; }
+
+.screen-shield-notification-label {
+  font-weight: bold;
+  padding: 0px 0px 0px 12px; }
+
+.screen-shield-notification-count-text {
+  padding: 0px 0px 0px 12px; }
+
+#panel.lock-screen {
+  background-color: rgba(46, 52, 54, 0.5); }
+
+.screen-shield-background {
+  background: black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
+
+#lockDialogGroup {
+  background: #2e3436 url(resource:///org/gnome/shell/theme/noise-texture.png);
+  background-repeat: repeat; }
+
+#screenShieldNotifications StButton#vhandle, #screenShieldNotifications StButton#hhandle {
+  background-color: rgba(57, 63, 63, 0.3); }
+  #screenShieldNotifications StButton#vhandle:hover, #screenShieldNotifications StButton#vhandle:focus, #screenShieldNotifications StButton#hhandle:hover, #screenShieldNotifications StButton#hhandle:focus {
+    background-color: rgba(57, 63, 63, 0.5); }
+  #screenShieldNotifications StButton#vhandle:active, #screenShieldNotifications StButton#hhandle:active {
+    background-color: rgba(33, 93, 156, 0.5); }
 
 #LookingGlassDialog {
-    background-color: rgba(0,0,0,0.80);
-    spacing: 4px;
-    padding: 4px;
-    border: 2px solid grey;
-    border-radius: 4px;
-}
-
-#LookingGlassDialog > #Toolbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  spacing: 4px;
+  padding: 4px;
+  border: 2px solid grey;
+  border-radius: 4px; }
+  #LookingGlassDialog > #Toolbar {
     border: 1px solid grey;
-    border-radius: 4px;
-}
-
-#LookingGlassDialog .labels {
-    spacing: 4px;
-}
-
-#LookingGlassDialog .notebook-tab {
+    border-radius: 4px; }
+  #LookingGlassDialog .labels {
+    spacing: 4px; }
+  #LookingGlassDialog .notebook-tab {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: #ccc;
     transition-duration: 100ms;
     padding-left: .3em;
-    padding-right: .3em;
-}
-
-#LookingGlassDialog .notebook-tab:hover {
-    color: white;
-    text-shadow: black 0px 2px 2px;
-}
-
-#LookingGlassDialog .notebook-tab:selected {
-    border-image: url("panel-button-border.svg") 10 10 0 2;
-    background-image: url("panel-button-highlight-wide.svg");
-    color: white;
-    text-shadow: black 0px 2px 2px;
-}
-
-#LookingGlassDialog .lg-inspector-title {
-    font-weight: bold;
-    padding-bottom: 8px;
-}
+    padding-right: .3em; }
+    #LookingGlassDialog .notebook-tab:hover {
+      color: white;
+      text-shadow: black 0px 2px 2px; }
+    #LookingGlassDialog .notebook-tab:selected {
+      border-bottom-width: 2px;
+      border-color: #256ab1;
+      color: white;
+      text-shadow: black 0px 2px 2px; }
+  #LookingGlassDialog StBoxLayout#EvalBox {
+    padding: 4px;
+    spacing: 4px; }
+  #LookingGlassDialog StBoxLayout#ResultsArea {
+    spacing: 4px; }
 
 .lg-dialog StEntry {
-    selection-background-color: #bbbbbb;
-    selected-color: #333333;
-}
+  selection-background-color: #bbbbbb;
+  selected-color: #333333; }
+.lg-dialog .shell-link {
+  color: #999999; }
+  .lg-dialog .shell-link:hover {
+    color: #dddddd; }
 
 .lg-completions-text {
-    font-size: .9em;
-    font-style: italic;
-}
+  font-size: .9em;
+  font-style: italic; }
 
 .lg-obj-inspector-title {
-    spacing: 4px;
-}
+  spacing: 4px; }
 
 .lg-obj-inspector-button {
-    border: 1px solid gray;
-    padding: 4px;
-    border-radius: 4px;
-}
-
-.lg-obj-inspector-button:hover {
-    border: 1px solid #ffffff;
-}
-
-.lg-dialog .shell-link {
-    color: #999999;
-}
-
-.lg-dialog .shell-link:hover {
-    color: #dddddd;
-}
-
-#LookingGlassDialog StBoxLayout#EvalBox {
-    padding: 4px;
-    spacing: 4px;
-}
-
-#LookingGlassDialog StBoxLayout#ResultsArea {
-    spacing: 4px;
-}
+  border: 1px solid gray;
+  padding: 4px;
+  border-radius: 4px; }
+  .lg-obj-inspector-button:hover {
+    border: 1px solid #ffffff; }
 
 #lookingGlassExtensions {
-    padding: 4px;
-}
+  padding: 4px; }
 
 .lg-extensions-list {
-    padding: 4px;
-    spacing: 6px;
-}
+  padding: 4px;
+  spacing: 6px; }
 
 .lg-extension {
-    border: 1px solid #6f6f6f;
-    border-radius: 4px;
-    padding: 4px;
-}
+  border: 1px solid #6f6f6f;
+  border-radius: 4px;
+  padding: 4px; }
 
 .lg-extension-name {
-    font-weight: bold;
-}
+  font-weight: bold; }
 
 .lg-extension-meta {
-    spacing: 6px;
-}
+  spacing: 6px; }
 
 #LookingGlassPropertyInspector {
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid grey;
-    border-radius: 4px;
-    padding: 6px;
-}
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 6px; }
 
-/* Calendar popup */
-
-.calendar-vertical-separator {
-    -stipple-width: 1px;
-    -stipple-color: #505050;
-    width: 0.3em;
-}
-
-#calendarPopup .calendar {
-    padding: 0px;
-}
-
-.calendar {
-    padding: 0em 1.7em 0em 1.75em;
-    spacing-rows: 0px;
-    spacing-columns: 0px;
-}
-
-.calendar-month-label {
-    color: #d7d7d7;
-    font-size: 9.5pt;
-    font-weight: normal;
-    padding-bottom: 8px;
-    padding-top: 8px;
-}
-
-.calendar-month-label:focus {
-    background-color: #999999;
-}
-
-.calendar-change-month-back {
-    width: 18px;
-    height: 12px;
-    background-image: url("calendar-arrow-left.svg");
-    border-radius: 4px;
-}
-
-.calendar-change-month-back:rtl {
-    background-image: url("calendar-arrow-right.svg");
-}
-
-.calendar-change-month-back:hover,
-.calendar-change-month-back:focus {
-    background-color: #d7d7d7;
-}
-.calendar-change-month-back:active {
-    background-color: #aaaaaa;
-}
-
-.calendar-change-month-forward {
-    width: 18px;
-    height: 12px;
-    background-image: url("calendar-arrow-right.svg");
-    border-radius: 4px;
-}
-
-.calendar-change-month-forward:rtl {
-    background-image: url("calendar-arrow-left.svg");
-}
-
-.calendar-change-month-forward:hover,
-.calendar-change-month-forward:focus {
-    background-color: #d7d7d7;
-}
-.calendar-change-month-forward:active {
-    background-color: #aaaaaa;
-}
-
-.datemenu-date-label {
-    padding: .4em 1.7em;
-    font-weight: bold;
-    text-align: center;
-    color: #d7d7d7;
-}
-
-.datemenu-date-label:focus {
-    background-color: #999999;
-}
-
-.calendar-day-base {
-    font-size: 9pt;
-    text-align: center;
-    width: 2.4em;
-    height: 2.4em;
-}
-
-.calendar-day-base:hover,
-.calendar-day-base:focus {
-    background-color: #777777;
-}
-
-.calendar-day-base:active {
-    font-size: 9pt;
-    background-color: rgba(41, 128, 185,1.0);
-    color: white;
-}
-
-.calendar-day-heading {
-    color: #888a85;
-    padding-top: .2em;
-    height: 1.7em;
-}
-
-.calendar-week-number {
-    color: #babdb6;
-    font-weight: bold;
-}
-
-/* Hack used in lieu of border-collapse - see calendar.js */
-.calendar-day {
-    border: 1px solid #505050;
-    color: #babdb6;
-    border-top-width: 0;
-    border-left-width: 0;
-}
-
-.calendar-day-top {
-    border-top-width: 1px;
-}
-
-.calendar-day-left {
-    border-left-width: 1px;
-}
-
-.calendar-work-day {
-}
-
-.calendar-nonwork-day {
-    background-color: rgba(128, 128, 128, .15);
-}
-
-.calendar-today {
-    background-image: none;
-    background: rgba(231, 76, 60,1.0);
-    text-shadow: black 0px 0px 0px;
-    font-weight: bold;
-}
-
-.calendar-day-with-events {
-    font-weight: bold;
-    color: white;
-}
-
-.calendar-other-month-day {
-    color: #444;
-}
-
-.events-table {
-    width: 320px;
-    spacing-columns: 6pt;
-    padding: 0 1.4em;
-}
-
-.events-table:ltr {
-    padding-right: 1.9em;
-}
-
-.events-table:rtl {
-    padding-left: 1.9em;
-}
-
-.events-day-header {
-    font-weight: bold;
-    color: #999999;
-    padding-left: 0.4em;
-    padding-top: 1.2em;
-}
-
-.events-day-header:first-child {
-    padding-top: 0;
-}
-
-.events-day-header:rtl {
-    padding-left: 0;
-    padding-right: 0.4em;
-}
-
-.events-day-dayname {
-    color: rgba(153, 153, 153, 1.0);
-    text-align: left;
-    min-width: 20px;
-}
-
-.events-day-dayname:rtl {
-    text-align: right;
-}
-
-.events-day-time {
-    color: #fff;
-    text-align: right;
-}
-
-.events-day-time:rtl {
-    text-align: left;
-}
-
-.events-day-task {
-    color: rgba(153, 153, 153, 1.0);
-    padding-left: 8pt;
-}
-
-.events-day-task:rtl {
-    padding-left: 0px;
-    padding-right: 8pt;
-}
-
-.url-highlighter {
-    link-color: #ccccff;
-}
-
-/* Message Tray */
-#message-tray {
-    background: rgb(30,30,30) url(message-tray-background.png);
-    border: 0px;
-    background-repeat: repeat;
-    height: 72px;
-}
-
-.message-tray-summary {
-    height: 72px;
-}
-
-.message-tray-menu-button StIcon {
-    padding: 0 20px;
-    color: #aaaaaa;
-    icon-size: 24px;
-}
-
-.message-tray-menu-button:hover StIcon,
-.message-tray-menu-button:active StIcon,
-.message-tray-menu-button:focus StIcon {
-    color: #eeeeee;
-}
-
-.no-messages-label,
-.no-networks-label {
-    color: #999999;
-}
-
-.notification {
-    border-radius: 10px 10px 0px 0px;
-    background: rgba(30,30,30,0.9);
-    padding: 8px 8px 4px 8px;
-    border:0px;
-    spacing-rows: 4px;
-    spacing-columns: 10px;
-}
-
-.notification, #notification-container {
-    font-size: 11pt;
-    width: 34em;
-}
-
-.notification.multi-line-notification {
-    padding-bottom: 8px;
-}
-
-.notification-unexpanded {
-    /* We want to force the actor at a specific size, irrespective
-       of its minimum and preferred size, so we override both */
-    min-height: 36px;
-    height: 36px;
-}
-
-/* We use row-span = 2 for the image cell, which prevents its height preferences to be
-   taken into account during allocation, so its height ends up being limited by the height
-   of the content in the other rows. To avoid showing a stretched image, we set the minimum
-   height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
-.notification-with-image {
-    min-height: 159px;
-}
-
-.summary-boxpointer {
-    -arrow-border-radius: 15px;
-    -arrow-background-color: rgba(0,0,0,0.9);
-    -arrow-base: 36px;
-    -arrow-rise: 18px;
-    color: white;
-    -boxpointer-gap: 4px;
-}
-
-.summary-boxpointer .notification {
-    border-radius: 9px;
-    background: rgba(0,0,0,0) !important;
-    padding-bottom: 12px;
-}
-
-.summary-boxpointer #summary-right-click-menu {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-.summary-notification-stack-scrollview {
-    max-height: 18em;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.summary-notification-stack-scrollview:ltr {
-    padding-right: 8px;
-}
-
-.summary-notification-stack-scrollview:rtl {
-    padding-left: 8px;
-}
-
-.notification-scrollview {
-    max-height: 10em;
-    -st-vfade-offset: 24px;
-}
-
-.notification-scrollview:ltr > StScrollBar {
-    padding-left: 6px;
-}
-
-.notification-scrollview:rtl > StScrollBar {
-    padding-right: 6px;
-}
-
-.notification-body {
-    spacing: 5px;
-}
-
-.notification-actions {
-    padding-top: 18px;
-    spacing: 10px;
-}
-
-.secondary-icon {
-    icon-size: 1.09em;
-}
-
-.hotplug-transient-box {
-    spacing: 6px;
-    padding: 2px 72px 2px 12px;
-}
-
-.hotplug-notification-item-icon {
-    icon-size: 20px;
-    padding: 4px 5px;
-}
-
-.hotplug-resident-box {
-    spacing: 8px;
-}
-
-.hotplug-resident-mount {
-    spacing: 8px;
-    border-radius: 4px;
-
-    color: #ccc;
-}
-
-.hotplug-resident-mount:hover {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255, 255, 255, 0.1);
-    background-gradient-end: rgba(255, 255, 255, 0);
-
-    color: #fff;
-}
-
-.hotplug-resident-mount-label {
-    color: inherit;
-    padding-left: 6px;
-}
-
-.hotplug-resident-mount-icon {
-    icon-size: 24px;
-    padding-left: 6px;
-}
-
-.hotplug-resident-eject-icon {
-    icon-size: 16px;
-}
-
-.hotplug-resident-eject-button {
-    padding: 7px;
-    border-radius: 5px;
-    color: #ccc;
-}
-
-.chat-log-message {
-    background: #000;
-    color: #888888;
-}
-
-.chat-group-sent, .chat-group-meta {
-    padding: 8px 0;
-}
-
-.chat-received {
-    padding-left: 4px;
-}
-
-.chat-received:rtl {
-    padding-left: 0px;
-    padding-right: 4px;
-}
-
-.chat-sent {
-    padding-left: 18pt;
-    color: #959595;
-}
-
-.chat-sent:rtl {
-    padding-left: 0px;
-    padding-right: 18pt;
-}
-
-.chat-meta-message {
-    padding-left: 4px;
-    font-size: 9pt;
-    color: #bbbbbb;
-}
-
-.chat-meta-message:rtl {
-    padding-left: 0px;
-    padding-right: 4px;
-}
-
-.chat-notification-scrollview{
-    max-height: 22em;
-}
-
-.subscription-message {
-    font-style: italic;
-}
-
-.notification StEntry {
-    border-radius: 4px;
-}
-
-.summary-source-button {
-    padding: 6px 3px 6px 3px;
-}
-
-.summary-source-button:last-child:ltr {
-    padding-right: 6px;
-}
-
-.summary-source-button:last-child:rtl {
-    padding-left: 6px;
-}
-
-.summary-source-button:hover .summary-source {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.summary-source-button:focus .summary-source,
-.summary-source-button:selected .summary-source {
-    background-color: rgba(255,255,255,0.33);
-}
-
-.summary-source {
-    border-radius: 4px;
-    padding: 0 6px 0 6px;
-    transition-duration: 100ms;
-}
-
-.summary-source-counter {
-    background-image: none;
-    background-color: rgba(39, 174, 96,1.0);
-    font-size: 10pt;
-    font-weight: normal;
-    height: 25px;
-    width: 25px;
-    border-radius: 36px;
-    -shell-counter-overlap-x: 0px;
-    -shell-counter-overlap-y: 0px;
-}
-
-/* OSD */
-.osd-window {
-    text-align: center;
-    font-weight: normal;
-    spacing: 1em;
-}
-
-.osd-window .level {
-    height: 0.6em;
-    border-radius: 0.3em;
-    background-color: rgba(190,190,190,0.2);
-}
-
-/* App Switcher */
-.switcher-popup {
-    padding: 8px;
-    spacing: 16px;
-}
-
-.osd-window,
-.switcher-list {
-    background: rgba(30,30,30,0.9);
-    border: 0px solid rgba(128,128,128,0.40);
-    border-radius: 8px;
-    padding: 15px;
-    font-weight: normal;
-}
-
-.switcher-list-item-container {
-    spacing: 8px;
-}
-
-.thumbnail-scroll-gradient-left {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 1.0);
-    background-gradient-end: rgba(51, 51, 51, 0);
-    border-radius: 24px;
-    border-radius-topright: 0px;
-    border-radius-bottomright: 0px;
-    width: 60px;
-}
-
-.thumbnail-scroll-gradient-right {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 0);
-    background-gradient-end: rgba(51, 51, 51, 1.0);
-    border-radius: 24px;
-    border-radius-topleft: 0px;
-    border-radius-bottomleft: 0px;
-    width: 60px;
-}
-
-.switcher-list .item-box {
-    padding: 8px;
-    border-radius: 8px;
-}
-
-.switcher-list .item-box:outlined {
-    padding: 6px;
-    border: 2px solid rgba(85,85,85,1.0);
-}
-
-.switcher-list .item-box:selected {
-    background: rgba(85,85,85,0.7);
-}
-
-.switcher-list .thumbnail-box {
-    padding: 2px;
-    spacing: 4px;
-}
-
-.switcher-list .thumbnail {
-    width:  256px;
-}
-
-.switcher-list .separator {
-    width: 1px;
-    background: rgba(255,255,255,0.33);
-}
-
-.ripple-box {
-    width: 52px;
-    height: 52px;
-    background-image: url("corner-ripple-ltr.png");
-    background-size: contain;
-}
-
-.ripple-box:rtl {
-    background-image: url("corner-ripple-rtl.png");
-}
-
-.switcher-arrow {
-    border-color: rgba(0,0,0,0);
-    color: #808080;
-}
-
-.switcher-arrow:highlighted {
-    border-color: rgba(0,0,0,0);
-    color: white;
-}
-
-/* Workspace Switcher */
-.workspace-switcher-group {
-    padding: 12px;
-}
-
-.workspace-switcher-container {
-    background: rgba(0,0,0,0.8);
-    border: 1px solid rgba(128,128,128,0.40);
-    border-radius: 24px;
-    padding: 20px;
-}
-
-.workspace-switcher {
-    background: transparent;
-    border: 0px;
-    border-radius: 0px;
-    padding: 0px;
-    spacing: 8px;
-}
-
-.ws-switcher-active-up {
-    height: 100px;
-    border: 0px;
-    background: rgba(85,85,85,0.7);
-    background-image: url("ws-switch-arrow-up.svg");
-    border-radius: 8px;
-}
-
-.ws-switcher-active-down {
-    height: 100px;
-    border: 0px;
-    background: rgba(85,85,85,0.7);
-    background-image: url("ws-switch-arrow-down.svg");
-    border-radius: 8px;
-}
-
-.ws-switcher-box {
-    height: 96px;
-    border: 2px solid rgba(185,185,185,0.5);
-    background: transparent;
-    border-radius: 8px;
-}
-
-/* Modal Dialogs */
-
-/* Dialog Subject Text Style */
-.show-processes-dialog-subject,
-.mount-question-dialog-subject,
-.end-session-dialog-subject {
-    font-size: 16pt;
-    font-weight: normal;
-    color: #333;
-    border: 0px solid red;
-}
-
-.modal-dialog {
-    border: none;
-    border-radius: 6px;
-    background-color: #f4f4f4;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.5);
-    padding: 0;
-    color: #333;
-}
-
-.modal-dialog > * {
-    padding: 24px 24px 36px;
-    border-radius: 0px;
-}
-
-/* Parte de abajo del dialogo, contiene botones */
-.modal-dialog-button-box,
-.modal-dialog > .modal-dialog-button-box {
-    spacing: 0px;
-    margin: 0px;
-    padding: 18px 28px;
-    background-color: rgba(198, 203, 205, 1);
-    border: solid 0px #c4c4c4;
-    border-radius: 0px 0px 6px 6px;
-}
-
-/* Run Dialog */
-
-.run-dialog-label {
-    font-size: 10pt;
-    font-weight: normal;
-    color: rgb(60,60,60);
-    padding-bottom: 6px;
-}
-
-.run-dialog-error-box {
-    padding-top: 15px;
-    spacing: 5px;
-}
-
-.modal-dialog .run-dialog-entry {
-    width: 20em;
-}
-
-.lightbox {
-    background-color: black;
-}
-
-.flashspot {
-    background-color: white;
-}
-
-/* End Session Dialog */
-.end-session-dialog {
-    spacing: 42px;
-}
-
-.end-session-dialog-list {
-    padding-top: 20px;
-}
-
-.end-session-dialog-subject {
-    padding-left: 17px;
-    padding-bottom: 20px;
-}
-
-.end-session-dialog-subject:rtl {
-    padding-left: 0px;
-    padding-right: 17px;
-}
-
-.end-session-dialog-description {
-    padding-left: 17px;
-    width: 28em;
-}
-
-.end-session-dialog-description:rtl {
-    padding-right: 17px;
-}
-
-.end-session-dialog-logout-icon {
-    border: 0px solid #8b8b8b;
-    border-radius: 5px;
-    width: 32px;
-    height: 32px;
-    background-size: contain;
-}
-
-.end-session-dialog-shutdown-icon {
-    color: #333;
-    width: 32px;
-    height: 32px;
-}
-
-.end-session-dialog-inhibitor-layout {
-    spacing: 16px;
-    max-height: 200px;
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-.end-session-dialog-list-header {
-    font-weight: bold;
-}
-
-.end-session-dialog-app-list-item,
-.end-session-dialog-session-list-item {
-    spacing: 2em;
-}
-
-.end-session-dialog-app-list-item-name,
-.end-session-dialog-session-list-item-name {
-    font-weight: bold;
-}
-
-.end-session-dialog-app-list-item-description {
-    color: #666;
-    font-size: 10pt;
-}
-
-.end-session-dialog .modal-dialog-button:last-child{
-    border-image: none;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(231, 76, 60,1.0);
-    background-gradient-end: rgba(192, 57, 43,1.0);
-    color: #fff;
-}
-
-.end-session-dialog .modal-dialog-button:last-child:hover{
-    background-gradient-start: rgba(231, 76, 60,0.85);
-    background-gradient-end: rgba(192, 57, 43,0.85);
-}
-
-.end-session-dialog .modal-dialog-button:last-child:active{
-    background-gradient-start: rgba(211, 56, 40,1);
-    background-gradient-end: rgba(172, 37, 23,1);
-}
-
-.end-session-dialog .modal-dialog-button{
-    width: 70px;
-    background-gradient-start: rgba(38, 194, 129,1.0);
-    background-gradient-end: rgba(38, 166, 91,1.0);
-    color: #fff;
-}
-
-.end-session-dialog .modal-dialog-button:hover{
-    background-gradient-start: rgba(38, 194, 129,0.85);
-    background-gradient-end: rgba(38, 166, 91,0.85);
-}
-
-.end-session-dialog .modal-dialog-button:active{
-    background-gradient-start: rgba(28, 184, 119,1.0);
-    background-gradient-end: rgba(28, 156, 81,1.0);
-}
-
-.end-session-dialog .modal-dialog-button:first-child {
-    background-gradient-start: rgba(236, 236, 236,1.0);
-    background-gradient-end: rgba(210, 215, 211,1.0);
-    color: #333;
-}
-
-.end-session-dialog .modal-dialog-button:first-child:hover{
-    background-gradient-start: rgba(245, 245, 245,1);
-    background-gradient-end: rgba(220, 225, 221,1);
-}
-
-.end-session-dialog .modal-dialog-button:first-child:active {
-    background-gradient-start: rgba(236, 236, 236,0.8);
-    background-gradient-end: rgba(210, 215, 211,0.8);
-}
-
-/* ShellMountOperation Dialogs */
-.shell-mount-operation-icon {
-    icon-size: 48px;
-}
-
-.mount-password-reask {
-    color: red;
-}
-
-.show-processes-dialog,
-.mount-question-dialog {
-    spacing: 24px;
-}
-
-.show-processes-dialog-subject,
-.mount-question-dialog-subject {
-    padding-top: 10px;
-    padding-left: 17px;
-    padding-bottom: 6px;
-}
-
-.mount-question-dialog-subject {
-    max-width: 500px;
-}
-
-.show-processes-dialog-subject:rtl,
-.mount-question-dialog-subject:rtl {
-    padding-left: 0px;
-    padding-right: 17px;
-}
-
-.show-processes-dialog-description,
-.mount-question-dialog-description {
-    padding-left: 17px;
-    width: 28em;
-}
-
-.show-processes-dialog-description:rtl,
-.mount-question-dialog-description:rtl {
-    padding-right: 17px;
-}
-
-.show-processes-dialog-app-list {
-    font-size: 10pt;
-    max-height: 200px;
-    padding-top: 24px;
-    padding-left: 49px;
-    padding-right: 32px;
-}
-
-.show-processes-dialog-app-list:rtl {
-    padding-right: 49px;
-    padding-left: 32px;
-}
-
-.show-processes-dialog-app-list-item {
-    color: #ccc;
-}
-
-.show-processes-dialog-app-list-item:hover {
-    color: white;
-}
-
-.show-processes-dialog-app-list-item:ltr {
-    padding-right: 1em;
-}
-
-.show-processes-dialog-app-list-item:rtl {
-    padding-left: 1em;
-}
-
-.show-processes-dialog-app-list-item-icon:ltr {
-    padding-right: 17px;
-}
-
-.show-processes-dialog-app-list-item-icon:rtl {
-    padding-left: 17px;
-}
-
-.show-processes-dialog-app-list-item-name {
-    font-size: 10pt;
-}
-
-/* Password or Authentication Dialog */
-.prompt-dialog {
-    /* this is the width of the entire modal popup */
-    width: 500px;
-}
-
-.prompt-dialog .modal-dialog-button:last-child{
-    border-image: none;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(231, 76, 60,1.0);
-    background-gradient-end: rgba(192, 57, 43,1.0);
-    color: #fff;
-}
-
-.prompt-dialog .modal-dialog-button:last-child:hover{
-    background-gradient-start: rgba(231, 76, 60,0.9);
-    background-gradient-end: rgba(192, 57, 43,0.9);
-}
-
-.prompt-dialog-main-layout {
-    spacing: 24px;
-    padding: 10px;
-}
-
-.prompt-dialog-message-layout {
-    spacing: 16px;
-}
-
-.prompt-dialog-headline {
-    font-size: 12pt;
-    font-weight: bold;
-    color: #666666;
-}
-
-.prompt-dialog-password-box {
-    spacing: 1em;
-    padding-bottom: 0em;
-}
-
-.prompt-dialog-error-label {
-    font-size: 10pt;
-    color: #e74c3c;
-    padding-bottom: 8px;
-}
-
-.prompt-dialog-info-label {
-    font-size: 10pt;
-    padding-bottom: 8px;
-}
-
-.hidden {
-    color: rgba(0,0,0,0);
-}
-
-.prompt-dialog-null-label {
-    font-size: 10pt;
-    padding-bottom: 8px;
-}
-
-/* Polkit Dialog */
-
-.polkit-dialog-user-layout {
-    padding-left: 10px;
-    spacing: 10px;
-}
-
-.polkit-dialog-user-layout:rtl {
-    padding-left: 0px;
-    padding-right: 10px;
-}
-
-.polkit-dialog-user-root-label {
-    color: #ff0000;
-}
-
-.polkit-dialog-user-icon {
-    border: 2px solid #8b8b8b;
-    border-radius: 5px;
-    background-size: contain;
-    width: 48px;
-    height: 48px;
-}
-
-/*  Agent Dialog */
-
-.network-dialog-secret-table {
-    spacing-rows: 15px;
-    spacing-columns: 1em;
-}
-
-.keyring-dialog-control-table {
-    spacing-rows: 15px;
-    spacing-columns: 1em;
-}
-
-/* Magnifier */
-
-.magnifier-zoom-region {
-    border: 2px solid rgba(128, 0, 0, 255);
-}
-
-.magnifier-zoom-region.full-screen {
-    border-width: 0px;
-}
-
-/* On-screen Keyboard */
-
-#keyboard {
-    background: rgba(30,30,30,0.8);
-}
-
-.keyboard-layout {
-    spacing: 10px;
-    padding: 10px;
-}
-
-.keyboard-row {
-    spacing: 15px;
-}
-
-.keyboard-key {
-    min-height: 32px;
-    min-width: 32px;
-    background-gradient-start: rgb(50,50,50);
-    background-gradient-end: rgb(30,30,30);
-    background-gradient-direction: vertical;
-    font-size: 14pt;
-    font-weight: normal;
-    border-radius: 6px;
-    border: 2px solid rgba(165, 165, 166, 0.4);
-    color: white;
-}
-
-.keyboard-key:grayed {
-   color: #808080;
-   border-color: #808080;
-}
-
-.keyboard-key:checked,
-.keyboard-key:hover {
-    background: #303030;
-    border: 2tpx solid white;
-}
-
-.keyboard-key:active {
-    background-gradient-start: rgb(30,30,30);
-    background-gradient-end: rgb(10,10,10);
-}
-
-.keyboard-subkeys {
-    color: white;
-    padding: 5px;
-    -arrow-border-radius: 8px;
-    -arrow-background-color: rgba(30,30,30,0.85);
-    -arrow-border-width: 0px;
-    -arrow-border-color: white;
-    -arrow-base: 0px;
-    -arrow-rise: 0px;
-    -boxpointer-gap: 0px;
-}
-
-/* IBus Candidate Popup */
-
-.candidate-popup-content {
-    padding: 0.5em;
-    spacing: 0.3em;
-}
-
-.candidate-index {
-    padding: 0 0.5em 0 0;
-    color: #cccccc;
-}
-
-.candidate-box {
-    padding: 0.3em 0.5em 0.3em 0.5em;
-}
-
-.candidate-box:selected {
-    border-radius: 4px;
-    background-color: rgba(255,255,255,0.2);
-}
-
-.candidate-box:hover {
-    border-radius: 4px;
-    background-color: rgba(255,255,255,0.1);
-}
-.candidate-page-button-box {
-    height: 2em;
-    width: 80px;
-}
-
-.vertical .candidate-page-button-box {
-    padding-top: 0.5em;
-}
-
-.horizontal .candidate-page-button-box {
-    padding-left: 0.5em;
-}
-
-.candidate-page-button-previous {
-    border-radius: 4px 0px 0px 4px;
-}
-
-.candidate-page-button-next {
-    border-radius: 0px 4px 4px 0px;
-}
-
-.candidate-page-button-icon {
-    icon-size: 1em;
-}
-
-/* Login Dialog */
-
-.framed-user-icon {
-    border: 2px solid #8b8b8b;
-    border-radius: 3px;
-    background-size: contain;
-}
-
-.framed-user-icon:hover {
-    border: 2px solid #bbbbbb;
-}
-
-.login-dialog-banner {
-    font-size: 10pt;
-    font-weight: bold;
-    text-align: center;
-    color: #666666;
-    padding-bottom: 1em;
-}
-
-.login-dialog-title {
-    font-size: 14pt;
-    font-weight: bold;
-    color: #666666;
-    padding-bottom: 2em;
-}
-
-.login-dialog {
-    /* Reset border and background */
-    border: none;
-    background-color: transparent;
-}
-
-.login-dialog-button-box {
-    spacing: 5px;
-}
-
-.login-dialog-user-list-view {
-    -st-vfade-offset: 1em;
-}
-
-.login-dialog-user-list {
-    spacing: 12px;
-    padding: .2em;
-    width: 23em;
-}
-
-.login-dialog-user-list-item {
-    border-radius: 5px;
-    padding: .2em;
-}
-
-.login-dialog-user-list-item:ltr {
-    padding-right: 1em;
-}
-
-.login-dialog-user-list-item:rtl {
-    padding-left: 1em;
-}
-
-.login-dialog-user-list-item .login-dialog-user-list-item-name {
-    font-size: 20px;
-    padding-left: 18px;
-    font-weight: bold;
-}
-
-.login-dialog-user-list:expanded .login-dialog-user-list-item {
-    color: #bfbfbf;
-}
-
-.login-dialog-user-list-item,
-.login-dialog-user-list-item:hover .login-dialog-user-list-item-name,
-.login-dialog-user-list:expanded .login-dialog-user-list-item:focus .login-dialog-user-list-item-name,
-.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
-    color: #bfbfbf;
-    text-shadow: black 0px 2px 2px;
-}
-
-.login-dialog-user-list-item:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.login-dialog-user-list:expanded .login-dialog-user-list-item:focus {
-    background-color: rgba(255,255,255,0.33);
-}
-
-.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
-    background-image: url("logged-in-indicator.svg");
-    background-size: contain;
-}
-
-.login-dialog-user-list-item-text-box {
-    padding: 0 0.5em;
-}
-
-.login-dialog-user-list-item .login-dialog-timed-login-indicator {
-    background-color: rgba(0,0,0,0.0);
-    height: 2px;
-}
-
-.login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
-    background-color: #8b8b8b;
-}
-
-.login-dialog-user-list-item-icon {
-    border: 2px solid #8b8b8b;
-    border-radius: 3px;
-    width: 64px;
-    height: 64px;
-}
-
-.login-dialog-not-listed-label {
-    font-size: 10.5pt;
-    font-weight: bold;
-    color: #666666;
-    padding-top: 1em;
-}
-
-.login-dialog-user-selection-box {
-    padding: 100px 0;
-}
-
-.login-dialog-user-selection-box .login-dialog-not-listed-label {
-    padding-left: 2px;
-}
-
-.login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
-.login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
-    color: #E8E8E8;
-}
-
-.login-dialog-username {
-    font-size: 16pt;
-    font-weight: bold;
-    text-align: left;
-    padding-left: 15px;
-    text-shadow: black 0px 4px 3px 0px;
-}
-
-.login-dialog-prompt-layout {
-    padding-top: 24px;
-    padding-bottom: 12px;
-    spacing: 8px;
-    width: 23em;
-}
-
-.login-dialog-prompt-label {
-    color: #eeeeee;
-    font-size: 14px;
-    padding-top: 11px;
-}
-
-.login-dialog-session-list-button StIcon {
-    icon-size: 1.25em;
-}
-
-.login-dialog-session-list-button {
-    color: #8b8b8b;
-}
-
-.login-dialog-session-list-button:hover,
-.login-dialog-session-list-button:active {
-    color: white;
-}
-
-.login-dialog-logo-bin {
-    padding: 24px 0px;
-}
-
-.login-dialog .modal-dialog-button-box {
-    spacing: 3px;
-}
-
-.login-dialog .modal-dialog-button {
-    border-radius: 5px;
-    padding: 3px 18px;
-}
-
-.login-dialog .modal-dialog-button:focus {
-    padding: 2px 17px;
-}
-
-.login-dialog .modal-dialog-button:default {
-    background-gradient-start: #6793c4;
-    background-gradient-end: #335d8f;
-    background-gradient-direction: vertical;
-    border-color: #16335d;
-}
-
-.login-dialog .modal-dialog-button:default:focus {
-    border: 2px solid #377fe7;
-}
-
-.login-dialog .modal-dialog-button:default:hover {
-    background-gradient-start: #74a0d0;
-    background-gradient-end: #436d9f;
-}
-
-.login-dialog .modal-dialog-button:default:active,
-.login-dialog .modal-dialog-button:default:pressed {
-    background-gradient-start: #436d9f;
-    background-gradient-end: #74a0d0;
-}
-
-.login-dialog .modal-dialog-button:default:insensitive {
-    border-color: #666666;
-    color: #9f9f9f;
-    background-gradient-direction: none;
-    background-color: rgba(102, 102, 102, 0.15);
-}
-
-.login-dialog-message {
-    padding-top: 4px;
-    padding-bottom: 16px;
-    min-height: 2em;
-}
-
-.login-dialog-message-warning {
-    color: orange;
-}
-
-.login-dialog-message-hint {
-    padding-top: 0px;
-    padding-bottom: 20px;
-}
-
-.user-widget-label {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
-    padding-left: 18px;
-    color:white;
-    text-shadow: black 0px 4px 3px 0px;
-}
-
-/* Screen shield */
-
-#panel.lock-screen,
-#screenShieldNotifications {
-    background-color: rgba(0,0,0,0.3);
-}
-
-.screen-shield-background {
-    background: black;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.9);
-}
-
-#lockDialogGroup {
-    background: #2e3436 url(noise-texture.png);
-    background-repeat: repeat;
-}
-
-.screen-shield-arrows {
-    padding-bottom: 3em;
-}
-
-.screen-shield-arrows Gjs_Arrow {
-    color: white;
-    width: 80px;
-    height: 48px;
-    -arrow-thickness: 12px;
-    -arrow-shadow: 0 1px 1px rgba(0,0,0,0.4);
-}
-
-.screen-shield-contents-box {
-    spacing: 48px;
-}
-
-.screen-shield-clock {
-    color: white;
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.6);
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 1.5em;
-}
-
-.screen-shield-clock-time {
-    font-size: 72pt;
-    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
-}
-
-.screen-shield-clock-date {
-    font-size: 28pt;
-}
-
-#screenShieldNotifications {
-    max-height: 500px;
-    padding: 12px;
-}
-
-.screen-shield-notifications-box {
-    spacing: 12px;
-    width: 30em;
-}
-
-.screen-shield-notification-source {
-    padding: 3px 6px;
-    spacing: 5px;
-}
-
-.screen-shield-notification-label {
-    font-weight: bold;
-    padding: 0px 0px 0px 12px;
-}
-
-.screen-shield-notification-count-text {
-    padding: 0px 0px 0px 12px;
-}
-
-/* Remove background from notifications, otherwise
-   opacity is doubled and they look darker
-*/
-.screen-shield-notifications-box .notification {
-    background-color: transparent;
-}
-
-/* Override padding on resident notifications, since
-   the notifications box has its own spacing
-*/
-.screen-shield-notifications-box .summary-notification-stack-scrollview {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-#screenShieldNotifications .notification-button,
-#screenShieldNotifications .notification-icon-button {
-    border: 1px rgba(255,255,255,0.5);
-}
-
-#screenShieldNotifications StScrollBar StBin#trough {
-    background-color: rgba(0,0,0,0.2);
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.3);
-    border: none;
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle:hover,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.6);
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle:active,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.input-source-switcher-symbol {
-   font-size: 34pt;
-   width: 96px;
-   height: 96px;
-}
-
-/* Background menu */
-
-.background-menu {
-    -boxpointer-gap: 4px;
-}
