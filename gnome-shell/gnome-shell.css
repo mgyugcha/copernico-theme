@@ -1153,6 +1153,10 @@ StScrollBar StButton#hhandle:active {
 .app-view-control:active {
     color: #FAFAFA;
     background-color: rgba(20,20,20,0.5); }
+.app-view-control:hover,
+.app-view-control:focus {
+    color: #FAFAFA;
+    background-color: rgba(20,20,20,0.8); }
 .app-view-control:checked {
     background-color: rgba(0,0,0,0.4); }
 .app-view-control:first-child {
