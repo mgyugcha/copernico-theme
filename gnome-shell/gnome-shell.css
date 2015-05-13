@@ -30,25 +30,29 @@ stage {
     border-width: 1px;
     padding: 4px 32px;
     color: #3C3C3C;
-    background-color: rgb(239,239,239);
+    background-gradient-start: rgb(239,239,239);
+    background-gradient-end: rgb(239,239,239);
     border-color: rgb(239,239,239);
     box-shadow: inset 0 1px rgba(0,0,0,0);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
 .button:focus,
 .button:hover {
-    background-color: rgb(249,249,249);
+    background-gradient-start: rgb(249,249,249);
+    background-gradient-end: rgb(249,249,249);
     border-color: rgb(249,249,249);
     box-shadow: inset 0 1px rgba(0,0,0,0);}
 .button:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF;
     box-shadow: inset 0 1px rgba(0,0,0,0);
     text-shadow: none;
     icon-shadow: none; }
-  .button:active {
-    background-color: rgb(234,234,234);
+.button:active {
+    background-gradient-start: rgb(234,234,234);
+    background-gradient-end: rgb(234,234,234);
     border-color: rgb(234,234,234);
     box-shadow: inset 0 1px rgba(0,0,0,0);}
 
@@ -267,53 +271,65 @@ StScrollBar StButton#hhandle:active {
 
 /* Normal */
 .end-session-dialog .modal-dialog-button:first-child {
-    background-color: rgb(239,239,239);
+    background-gradient-start: rgb(239,239,239);
+    background-gradient-end: rgb(239,239,239);
     border-color: rgb(239,239,239);
     color: #3C3C3C; }
 .end-session-dialog .modal-dialog-button:first-child:focus,
 .end-session-dialog .modal-dialog-button:first-child:hover {
-    background-color: rgb(249,249,249);
+    background-gradient-start: rgb(249,249,249);
+    background-gradient-end: rgb(249,249,249);
     border-color: rgb(249,249,249); }
 .end-session-dialog .modal-dialog-button:first-child:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF; }
 .end-session-dialog .modal-dialog-button:first-child:active {
-    background-color: rgb(234,234,234);
+    background-gradient-start: rgb(234,234,234);
+    background-gradient-end: rgb(234,234,234);
     border-color: rgb(234,234,234); }
 
 /* Restart */
 .end-session-dialog .modal-dialog-button {
-    background-color: rgb(39, 174, 96);
+    background-gradient-start: rgb(39, 174, 96);
+    background-gradient-end: rgb(39, 174, 96);
     border-color: rgb(39, 174, 96);
     color: #FAFAFA; }
 .end-session-dialog .modal-dialog-button:focus,
 .end-session-dialog .modal-dialog-button:hover {
-    background-color: rgb(49, 184, 106);
+    background-gradient-start: rgb(49, 184, 106);
+    background-gradient-end: rgb(49, 184, 106);
     border-color: rgb(49, 184, 106); }
 .end-session-dialog .modal-dialog-button:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF; }
 .end-session-dialog .modal-dialog-button:active {
-    background-color: rgb(34, 169, 91);
+    background-gradient-start: rgb(34, 169, 91);
+    background-gradient-end: rgb(34, 169, 91);
     border-color: rgb(34, 169, 91); }
 
 /* Poweroff */
 .end-session-dialog .modal-dialog-button:last-child {
-    background-color: rgb(209,72,65);
+    background-gradient-start: rgb(209,72,65);
+    background-gradient-end: rgb(209,72,65);
     border-color: rgb(209,72,65);
     color: #FAFAFA; }
 .end-session-dialog .modal-dialog-button:last-child:focus,
 .end-session-dialog .modal-dialog-button:last-child:hover {
-    background-color: rgb(219,82,75);
+    background-gradient-start: rgb(219,82,75);
+    background-gradient-end: rgb(219,82,75);
     border-color: rgb(219,82,75); }
 .end-session-dialog .modal-dialog-button:last-child:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF; }
 .end-session-dialog .modal-dialog-button:last-child:active {
-    background-color: rgb(204,67,61);
+    background-gradient-start: rgb(204,67,61);
+    background-gradient-end: rgb(204,67,61);
     border-color: rgb(204,67,61); }
 
 /* ShellMountOperation Dialogs */
@@ -412,19 +428,23 @@ StScrollBar StButton#hhandle:active {
     color: #3C3C3C; }
 
 .prompt-dialog .modal-dialog-button:last-child {
-    background-color: rgb(209,72,65);
+    background-gradient-start: rgb(209,72,65);
+    background-gradient-end: rgb(209,72,65);
     border-color: rgb(209,72,65);
     color: #FAFAFA; }
 .prompt-dialog .modal-dialog-button:last-child:focus,
 .prompt-dialog .modal-dialog-button:last-child:hover {
-    background-color: rgb(219,82,75);
+    background-gradient-start: rgb(219,82,75);
+    background-gradient-end: rgb(219,82,75);
     border-color: rgb(219,82,75); }
 .prompt-dialog .modal-dialog-button:last-child:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF; }
 .prompt-dialog .modal-dialog-button:last-child:active {
-    background-color: rgb(204,67,61);
+    background-gradient-start: rgb(204,67,61);
+    background-gradient-end: rgb(204,67,61);
     border-color: rgb(204,67,61); }
 
 .hidden {
@@ -992,19 +1012,23 @@ StScrollBar StButton#hhandle:active {
     icon-size: 16px; }
 
 .nm-dialog .modal-dialog-button:last-child {
-    background-color: rgb(41, 105, 176);
+    background-gradient-start: rgb(41,105,176);
+    background-gradient-end: rgb(41,105,176);
     border-color: rgb(41, 105, 176);
     color: #FAFAFA; }
 .nm-dialog .modal-dialog-button:last-child:focus,
 .nm-dialog .modal-dialog-button:last-child:hover {
-    background-color: rgb(51, 115, 186);
+    background-gradient-start: rgb(51,115,186);
+    background-gradient-end: rgb(51,115,186);
     border-color: rgb(51, 115, 186); }
 .nm-dialog .modal-dialog-button:last-child:insensitive {
     color: #D1D5D8;
-    background-color: #EFEFEF;
+    background-gradient-start: #EFEFEF;
+    background-gradient-end: #EFEFEF;
     border-color: #EFEFEF; }
 .nm-dialog .modal-dialog-button:last-child:active {
-    background-color: rgb(36,100,171);
+    background-gradient-start: rgb(36,100,171);
+    background-gradient-end: rgb(36,100,171);
     border-color: rgb(36,100,171); }
 
 .no-networks-label {
