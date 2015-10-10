@@ -1,6 +1,6 @@
 # Copernico Theme #
 
-**Copernico versión 3.16** es un tema para GNOME Shell que proporciona
+**Copernico versión 3.18** es un tema para GNOME Shell que proporciona
   un aspecto visual ligeramente mas agradable al que viene por
   defecto.
 
