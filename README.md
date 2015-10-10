@@ -16,8 +16,11 @@ Puedes descargar la última versión en
 ### Capturas ###
 
 * Escritorio:
+
 ![](https://raw.githubusercontent.com/mgyugcha/copernico-theme/master/images/copernico.png)
 * Aplicaciones
+
 ![](https://raw.githubusercontent.com/mgyugcha/copernico-theme/master/images/copernico-apps.png)
 * Cierre de sesión
+
 ![](https://raw.githubusercontent.com/mgyugcha/copernico-theme/master/images/copernico-end-session.png)
