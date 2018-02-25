@@ -1,5 +1,9 @@
 # Copernico Theme #
 
+**NOTE: A better version of copernico-theme is in [gitlab](https://gitlab.com/mgyugcha/copernico-theme)**
+
+**NOTA: Una version mejorada de copernico-theme esta en [gitlab](https://gitlab.com/mgyugcha/copernico-theme)**
+
 **Copernico versión 3.18** es un tema para GNOME Shell que proporciona
   un aspecto visual ligeramente mas agradable al que viene por
   defecto.
